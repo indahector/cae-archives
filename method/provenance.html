@@ -71,6 +71,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -297,7 +309,7 @@ flowchart TD
 <h3 class="anchored" data-anchor-id="what-the-wind-diagram-exposes">What the wind diagram exposes</h3>
 <ul>
 <li><strong>The bias-correction ambiguity (amber → red).</strong> The WRF a priori bias correction exists for some runs and not others, and AE appears to serve the <em>non</em>-a-priori-BC WRF <em>(<a href="../references.html#R19">R19</a> run matrix; <a href="../references.html#Q02">Q02</a> App. A)</em>. Resolving which cadcat runs are which is the first bias-adjustment documentation task — and if the answer is inconsistent across simulations, that is itself a data-quality finding.</li>
-<li><strong>LOCA2 wind parity (<a href="../references.html#R02">R02</a>).</strong> The hybrid path produces a wind field, but wind is not statistically downscaled the way temperature and precipitation are. This becomes the “use-with-caution” basis for every LOCA2 wind row in the <a href="../guidance/good-bad-matrix.qmd">matrix</a>.</li>
+<li><strong>LOCA2 wind parity (<a href="../references.html#R02">R02</a>).</strong> The hybrid path produces a wind field, but wind is not statistically downscaled the way temperature and precipitation are. This becomes the “use-with-caution” basis for every LOCA2 wind row in the <a href="../guidance/recommendation.html">matrix</a>.</li>
 <li><strong>The <code>wspeed</code> discrepancy (<a href="../references.html#DQ4">DQ4</a>).</strong> <code>wspeed</code> does not reconcile with the components in the LOCA2 hybrid files. Wind speed is downscaled independently rather than derived from the components. <code>wspeed</code> <a href="../guidance/variable-cards.html">variable card</a>.</li>
 </ul>
 <hr>
@@ -381,7 +393,7 @@ flowchart TD
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/indahector\.github\.io\/cae-archives\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -71,6 +71,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -226,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Purpose.</strong> Characterize Cal-Adapt Analytics Engine 10 m wind speed (<code>wspeed</code> / <code>wspd10mean</code>), 1980–2014, against the quality dimensions fixed in <a href="../method/scope-and-definitions.html">Scope &amp; Definitions</a>. Findings derived here feed the <a href="../guidance/good-bad-matrix.qmd">good/bad matrix</a>.</p>
+<p><strong>Purpose.</strong> Characterize Cal-Adapt Analytics Engine 10 m wind speed (<code>wspeed</code> / <code>wspd10mean</code>), 1980–2014, against the quality dimensions fixed in <a href="../method/scope-and-definitions.html">Scope &amp; Definitions</a>. Findings derived here feed the <a href="../guidance/recommendation.html">good/bad matrix</a>.</p>
 <p>Evaluated against <strong>station observations</strong> from <a href="https://github.com/Eagle-Rock-Analytics/historical-obs-platform">HDP</a> first, then against <a href="https://www.usgs.gov/data/conus404-four-kilometer-long-term-regional-hydroclimate-reanalysis-over-conterminous-united">CONUS404</a> and <a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview">ERA5</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1005,7 +1017,7 @@ Figure&nbsp;11: Ratio against ERA5 by region and terrain. WRF’s response rises
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/indahector\.github\.io\/cae-archives\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -71,6 +71,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -304,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div id="e7de0ac7" class="cell" data-execution_count="1">
+<div id="84be2e4c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>1,961 findings across 390 datasets
 
@@ -321,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-reconciliation" class="level2">
 <h2 class="anchored" data-anchor-id="sec-reconciliation">2. Where are the data defects?</h2>
 <p>Every requirement is recorded against <strong>where it failed</strong>, not as a single finding. Three of the four outcomes need action, and they need different action.</p>
-<div id="9ac5e7f3" class="cell" data-execution_count="2">
+<div id="a2562de9" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>| where it fails                 | code                             |   rows | requirement                                                                                                                                                        | doc                       |
 |:-------------------------------|:---------------------------------|-------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------|
@@ -365,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-errors" class="level2">
 <h2 class="anchored" data-anchor-id="sec-errors">3. The errors</h2>
-<div id="1a2a4adb" class="cell" data-execution_count="3">
+<div id="516a979b" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>| activity_id   | code                                    |   n | what it means                                                                                                                                          |
 |:--------------|:----------------------------------------|----:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -402,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="sec-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="sec-coverage">5. Coverage gaps</h2>
 <p>Variables documented in <code>variable_descriptions.csv</code> for which no store exists at any grid label:</p>
-<div id="484ae058" class="cell" data-execution_count="4">
+<div id="a35dc525" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>| activity_id   | table_id   | variable_id   |
 |:--------------|:-----------|:--------------|
@@ -417,7 +429,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>And the reverse, published but undocumented, so <code>climakitae</code> resolves no unit or display name:</p>
-<div id="82817f97" class="cell" data-execution_count="5">
+<div id="f2cf7cb6" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>| code                                | activity_id   | table_id   | variables                       |
 |:------------------------------------|:--------------|:-----------|:--------------------------------|
@@ -527,7 +539,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/indahector\.github\.io\/cae-archives\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

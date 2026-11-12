@@ -71,6 +71,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -202,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Each card answers, for one variable: what it is, where it came from, what it is good and bad for, and what known issues apply. Cards are generated from <code>data/variables.yml</code>; the use-case verdicts read live from the <a href="good-bad-matrix.qmd">good/bad matrix</a>, and every <code>R##</code> / <code>Q##</code> / <code>DQ##</code> links to its entry on the <a href="../references.html">References</a> page. Add a variable by adding one YAML entry.</p>
+<p>Each card answers, for one variable: what it is, where it came from, what it is good and bad for, and what known issues apply. Cards are generated from <code>data/variables.yml</code>; the use-case verdicts read live from the <a href="../guidance/recommendation.html">good/bad matrix</a>, and every <code>R##</code> / <code>Q##</code> / <code>DQ##</code> links to its entry on the <a href="../references.html">References</a> page. Add a variable by adding one YAML entry.</p>
 <section id="wspeed-10-m-wind-speed-scalar" class="level2">
 <h2 class="anchored" data-anchor-id="wspeed-10-m-wind-speed-scalar"><code>wspeed</code> — 10 m wind speed (scalar)</h2>
 <div class="callout callout-style-simple callout-note">
@@ -470,7 +482,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/indahector\.github\.io\/cae-archives\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
