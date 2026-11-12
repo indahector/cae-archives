@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-12">
+
+<title>Wind speed – AE Data Quality Guidance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../figures/heights.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AE Data Quality Guidance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-method" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Method</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-method">    
+        <li>
+    <a class="dropdown-item" href="../method/scope-and-definitions.html">
+ <span class="dropdown-text">Scope &amp; Definitions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../method/provenance.html">
+ <span class="dropdown-text">Provenance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../guidance/recommendation.html">
+ <span class="dropdown-text">Recommendation Matrix</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-variables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Variables</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-variables">    
+        <li>
+    <a class="dropdown-item" href="../variables/wind-speed.html">
+ <span class="dropdown-text">Wind speed</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guidance" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Guidance</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-guidance">    
+        <li>
+    <a class="dropdown-item" href="../guidance/recommendation.html">
+ <span class="dropdown-text">Recommendation Matrix</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../guidance/variable-cards.html">
+ <span class="dropdown-text">Variable Cards</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../guidance/catalog-audit.html">
+ <span class="dropdown-text">Catalog Audit</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../references.html"> 
+<span class="menu-text">References</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-the-stations-can-and-cannot-be" id="toc-what-the-stations-can-and-cannot-be" class="nav-link active" data-scroll-target="#what-the-stations-can-and-cannot-be">1. What the stations can and cannot be</a>
+  <ul class="collapse">
+  <li><a href="#screening" id="toc-screening" class="nav-link" data-scroll-target="#screening">Screening</a></li>
+  <li><a href="#the-observed-distribution-is-not-remotely-gaussian" id="toc-the-observed-distribution-is-not-remotely-gaussian" class="nav-link" data-scroll-target="#the-observed-distribution-is-not-remotely-gaussian">The observed distribution is not remotely Gaussian</a></li>
+  </ul></li>
+  <li><a href="#sec-level" id="toc-sec-level" class="nav-link" data-scroll-target="#sec-level">2. Level at station locations</a>
+  <ul class="collapse">
+  <li><a href="#does-a-product-explain-the-variation-between-sites" id="toc-does-a-product-explain-the-variation-between-sites" class="nav-link" data-scroll-target="#does-a-product-explain-the-variation-between-sites">2.1 Does a product explain the variation <em>between</em> sites?</a></li>
+  </ul></li>
+  <li><a href="#sec-between" id="toc-sec-between" class="nav-link" data-scroll-target="#sec-between">3. Between products, at station locations</a></li>
+  <li><a href="#sec-conus404" id="toc-sec-conus404" class="nav-link" data-scroll-target="#sec-conus404">4. CONUS404: do independent km-scale models agree?</a></li>
+  <li><a href="#sec-extremes" id="toc-sec-extremes" class="nav-link" data-scroll-target="#sec-extremes">5. Distribution shape and extremes</a>
+  <ul class="collapse">
+  <li><a href="#upper-tail" id="toc-upper-tail" class="nav-link" data-scroll-target="#upper-tail">Upper tail</a></li>
+  </ul></li>
+  <li><a href="#sec-seasonal" id="toc-sec-seasonal" class="nav-link" data-scroll-target="#sec-seasonal">6. Seasonal and regional structure</a>
+  <ul class="collapse">
+  <li><a href="#regional-structure" id="toc-regional-structure" class="nav-link" data-scroll-target="#regional-structure">6.1 Regional structure</a></li>
+  </ul></li>
+  <li><a href="#sec-era5" id="toc-sec-era5" class="nav-link" data-scroll-target="#sec-era5">7. ERA5: where and when coarse and fine fields diverge</a></li>
+  <li><a href="#what-this-means-for-the-matrix" id="toc-what-this-means-for-the-matrix" class="nav-link" data-scroll-target="#what-this-means-for-the-matrix">8. What this means for the matrix</a></li>
+  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats">9. Caveats</a>
+  <ul class="collapse">
+  <li><a href="#on-the-observational-reference" id="toc-on-the-observational-reference" class="nav-link" data-scroll-target="#on-the-observational-reference">On the observational reference</a></li>
+  <li><a href="#on-what-is-not-measured" id="toc-on-what-is-not-measured" class="nav-link" data-scroll-target="#on-what-is-not-measured">On what is not measured</a></li>
+  </ul></li>
+  <li><a href="#worth-doing-next" id="toc-worth-doing-next" class="nav-link" data-scroll-target="#worth-doing-next">Worth doing next</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Wind speed</h1>
+<p class="subtitle lead">Characterization of the cadcat 10 m wind speed</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 12, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Purpose.</strong> Characterize Cal-Adapt Analytics Engine 10 m wind speed (<code>wspeed</code> / <code>wspd10mean</code>), 1980–2014, against the quality dimensions fixed in <a href="../method/scope-and-definitions.html">Scope &amp; Definitions</a>. Findings derived here feed the <a href="../guidance/good-bad-matrix.qmd">good/bad matrix</a>.</p>
+<p>Evaluated against <strong>station observations</strong> from <a href="https://github.com/Eagle-Rock-Analytics/historical-obs-platform">HDP</a> first, then against <a href="https://www.usgs.gov/data/conus404-four-kilometer-long-term-regional-hydroclimate-reanalysis-over-conterminous-united">CONUS404</a> and <a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview">ERA5</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Headline
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>The products are right where we can check them, and can be wrong in a way the mean does not show.</strong></p>
+<p>At flat, open airport stations, the exposure class closest to what a grid cell represents, both products are unbiased: LOCA2 <strong>0.996</strong>, WRF <strong>0.995</strong> across 207 stations.</p>
+<p>But the <em>distribution</em> is too narrow. Observed Weibull shape <code>k</code> is <strong>1.51</strong>; the products give <strong>2.18</strong> and <strong>2.92</strong>. At those same stations both <strong>under-predict wind power density by 13–19 %</strong>, and produce days above 10 m/s at <strong>2.7 % against an observed 10.5 %</strong>, one quarter of the observed rate.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Compare against observations first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The first obvious way that comes to mind when reviewing a gridded product is to compare it against a reanalysis. The ratio between AE’s WRF/LOCA2 and ERA5 is <strong>1.5–1.6 over land</strong>, which reads as a 60 % error, and is not one.</p>
+<p><strong>ERA5 at 0.25° (~31 km) cannot represent a 3 km ridge–valley contrast</strong>, so over terrain the two are measuring different things and neither is wrong for disagreeing. §7 uses ERA5 as a common grid and a diagnostic, not as truth.</p>
+</div>
+</div>
+<hr>
+<section id="what-the-stations-can-and-cannot-be" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-the-stations-can-and-cannot-be">1. What the stations can and cannot be</h2>
+<p>Stations are the <strong>primary reference</strong>, not a common frame in the gridding sense, and the difference matters:</p>
+<ul>
+<li><strong>They are points.</strong> A station samples one spot; a LOCA2/WRF cell averages 9 km² and an ERA5 cell ~950 km². Part of every model–station difference is this footprint mismatch and cannot be removed.</li>
+<li><strong>They do not cover the ocean</strong>, and they are sparse above 2,000 m, exactly where §7 shows the products and ERA5 diverge most.</li>
+</ul>
+<p>So a gridded comparison still earns its place, for spatial and seasonal structure and for the ocean control. That is what §7 uses ERA5 for.</p>
+<section id="screening" class="level3">
+<h3 class="anchored" data-anchor-id="screening">Screening</h3>
+<p><strong>338 of 1,207 stations were removed</strong>, and the breakdown matters for how the archive is described:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>reason</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>record &lt; 60 months</td>
+<td>292</td>
+</tr>
+<tr class="even">
+<td>&lt; 20 distinct values (stuck sensor)</td>
+<td>98</td>
+</tr>
+<tr class="odd">
+<td>observed mean &lt; 0.5 m/s</td>
+<td>46</td>
+</tr>
+<tr class="even">
+<td>excluded prefix <code>RAWS_TR</code></td>
+<td>73</td>
+</tr>
+</tbody>
+</table>
+<p><strong>869 stations retained.</strong></p>
+</section>
+<section id="the-observed-distribution-is-not-remotely-gaussian" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="the-observed-distribution-is-not-remotely-gaussian">The observed distribution is not remotely Gaussian</h3>
+<p>Pooled over <strong>108 million valid hourly observations</strong>: mean 2.47 m/s, median 2.00, p90 5.37, p99 10.20.</p>
+<div id="fig-dist-hourly" class="column-page-inset quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dist-hourly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="dist_stations_hourly">
+  <iframe src="../figures/html/dist_stations_hourly.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dist-hourly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Observed hourly wind speed, pooled across the analysis stations. The zero spike and the mass below 1.5 m/s are reporting convention as much as wind.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>13.2 % of values are exactly zero</strong> and <strong>38.3 % fall below 1.5 m/s</strong>. The zero spike is the ASOS calm floor, reports below roughly 3 kt are recorded as 0 and No model can reproduce it. <strong>Every model/observation ratio in this page is therefore slightly generous to the model.</strong></p>
+</div>
+</div>
+</div>
+<div id="fig-dist-monthly" class="column-page-inset quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dist-monthly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="dist_stations_monthly">
+  <iframe src="../figures/html/dist_stations_monthly.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dist-monthly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The same observations aggregated to monthly means — the cadence at which products and observations are most often compared. The calm floor and the broad tail both disappear, which is why a monthly comparison cannot see the failure in §5.
+</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-level" class="level2">
+<h2 class="anchored" data-anchor-id="sec-level">2. Level at station locations</h2>
+<p><strong>At airports, agreement between both products and observations is remarkable:</strong> Median <code>model / observation</code> of <strong>0.996 (LOCA2)</strong> and <strong>0.995 (WRF)</strong> across 207 flat, open stations. Two entirely different downscaling methods land within half a percent of observations and of each other.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Unbiased is not accurate:</strong> Only <strong>33 % of airport stations</strong> fall within ±10 % for WRF (<strong>48 %</strong> for LOCA2); the IQRs are 0.84–1.15 and 0.88–1.10. The errors cancel across 200 stations rather than being individually small, the signature of point-versus-area sampling. For a user siting a single project, the ±10 % figure is very relevant.</p>
+</div>
+</div>
+</div>
+<p><strong>Every other station class reads low relative to the products.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>class</th>
+<th>n</th>
+<th>observed mean</th>
+<th>LOCA2</th>
+<th>WRF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>airport</td>
+<td>207</td>
+<td><strong>2.90 m/s</strong></td>
+<td>0.996</td>
+<td>0.995</td>
+</tr>
+<tr class="even">
+<td>vegetated (RAWS)</td>
+<td>469</td>
+<td>2.41 m/s</td>
+<td>1.171</td>
+<td>1.517</td>
+</tr>
+<tr class="odd">
+<td>irrigated (CIMIS)</td>
+<td>173</td>
+<td>1.96 m/s</td>
+<td>1.403</td>
+<td>1.488</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Airports record more wind than any other class despite sitting lowest:</strong> median 135 m against RAWS’s 1,094 m. RAWS masts are often on ridges but exist to represent wildland fire danger, fuel moisture and ecological conditions, so they sit in vegetation-representative clearings; canopy shelter dominates.</p>
+<p><strong>LOCA2 and WRF diverge sharply at sheltered sites:</strong> 1.17 against 1.52 at RAWS, while being identical at airports. LOCA2 is smoother over complex terrain, produces less terrain-driven acceleration, and so lands nearer observations that are themselves sheltered.</p>
+<div id="fig-agreement-maps" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-agreement-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="station_agreement_maps">
+  <iframe src="../figures/html/station_agreement_maps.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-agreement-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Per-station model/observation ratio. Scatter within a region is as large as the difference between regions. The siting effect made visible, and it is why only the airport class can grade the products.
+</figcaption>
+</figure>
+</div>
+<section id="does-a-product-explain-the-variation-between-sites" class="level3">
+<h3 class="anchored" data-anchor-id="does-a-product-explain-the-variation-between-sites">2.1 Does a product explain the variation <em>between</em> sites?</h3>
+<p><strong>Both products explain between-site variation far better than ERA5.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>network</th>
+<th>ERA5</th>
+<th>LOCA2</th>
+<th>WRF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ASOSAWOS</td>
+<td>0.321</td>
+<td>0.668</td>
+<td><strong>0.681</strong></td>
+</tr>
+<tr class="even">
+<td>OtherISD</td>
+<td>0.391</td>
+<td><strong>0.670</strong></td>
+<td>0.518</td>
+</tr>
+<tr class="odd">
+<td>CIMIS</td>
+<td>0.065</td>
+<td>0.571</td>
+<td><strong>0.656</strong></td>
+</tr>
+<tr class="even">
+<td>RAWS</td>
+<td>0.294</td>
+<td><strong>0.799</strong></td>
+<td>0.444</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ERA5’s <code>std_ratio</code> of 0.495 is the resolution deficit made visible at points.</strong> A 31 km field carries only half the station-to-station variance that exists; both km-scale-informed products recover most of it (0.86 and 0.92). The km-scale products carry real point-scale information that ERA5 does not.</p>
+<hr>
+</section>
+</section>
+<section id="sec-between" class="level2">
+<h2 class="anchored" data-anchor-id="sec-between">3. Between products, at station locations</h2>
+<div id="fig-between" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="between_products_stations">
+  <iframe src="../figures/html/between_products_stations.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Product against product at each station, with observations. The spread perpendicular to the 1:1 line is what neither product resolves.
+</figcaption>
+</figure>
+</div>
+<p><strong>The two WRF drivers are interchangeable</strong>, which is what licenses treating them as one product: median difference <strong>+0.60 %</strong>, IQR <strong>−0.76 % to +1.65 %</strong>. The driver changes the weather, not the climate.</p>
+<p><strong>The products differ depending on where they are measured:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>all stations</th>
+<th>airport</th>
+<th>irrigated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LOCA2</td>
+<td>1.166</td>
+<td><strong>0.996</strong></td>
+<td>1.403</td>
+</tr>
+<tr class="even">
+<td>WRF</td>
+<td>1.354</td>
+<td><strong>0.995</strong></td>
+<td>1.488</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The pooled column is the least useful number in the table.</strong> LOCA2 1.166 against WRF 1.354 looks like a substantive difference between products, but it is largely a difference in how each responds to stations sheltered by amounts neither model knows. §4 asks the same question without that confusion.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-conus404" class="level2">
+<h2 class="anchored" data-anchor-id="sec-conus404">4. CONUS404: do independent km-scale models agree?</h2>
+<p>On CONUS404’s own 4 km grid, with no coarse field involved:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>product</th>
+<th>median ratio</th>
+<th>n_cells</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>WRF</strong></td>
+<td><strong>1.020</strong></td>
+<td>225,848</td>
+</tr>
+<tr class="even">
+<td>LOCA2</td>
+<td><strong>0.902</strong></td>
+<td>49,773</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two independently built km-scale models agree to 2 %.</strong> Different institutions, different configurations, different land-surface and physics choices.</p>
+<p><strong>LOCA2 at 0.902 sits 10 % below an independent km-scale model</strong> while sitting 29 % <em>above</em> ERA5 (§7). Statistical downscaling inherits the smoother field it was trained to reproduce and does not manufacture the acceleration a dynamical model generates.</p>
+<p><strong>Taken with §2 the picture is consistent.</strong> At airports both products are right. Away from airports LOCA2 is lower than WRF; against an unobstructed km-scale comparator LOCA2 is lower than WRF.</p>
+<hr>
+</section>
+<section id="sec-extremes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-extremes">5. Distribution shape and extremes</h2>
+<p><strong>This is where both products have issues with respect to the observations, and monthly means hide it completely.</strong></p>
+<div id="fig-dist-daily" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dist-daily-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="dist_daily_stations">
+  <iframe src="../figures/html/dist_daily_stations.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dist-daily-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Daily wind speed at all analysis stations. Left: density, the products peak too high and too narrow. Centre: log density, where the tail deficit shows. Right: Q–Q against observations.
+</figcaption>
+</figure>
+</div>
+<div id="fig-dist-airports" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dist-airports-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="dist_daily_airports">
+  <iframe src="../figures/html/dist_daily_airports.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dist-airports-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The same at airport stations only, where the mean is right to within half a percent. The shape failure is independent of the level agreement.
+</figcaption>
+</figure>
+</div>
+<p><strong>Weibull <code>k</code> describes the balance between calm and windy days</strong>; lower <code>k</code> means a broader distribution.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>source</th>
+<th>mean</th>
+<th>k (shape)</th>
+<th>A (scale)</th>
+<th>power W/m²</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>stations</strong></td>
+<td>2.43</td>
+<td><strong>1.51</strong></td>
+<td>2.69</td>
+<td>23.7</td>
+</tr>
+<tr class="even">
+<td>LOCA2</td>
+<td>2.94</td>
+<td>2.18</td>
+<td>3.32</td>
+<td>27.4</td>
+</tr>
+<tr class="odd">
+<td>WRF</td>
+<td>3.40</td>
+<td><strong>2.92</strong></td>
+<td>3.81</td>
+<td>34.3</td>
+</tr>
+<tr class="even">
+<td>ERA5</td>
+<td>2.16</td>
+<td>2.32</td>
+<td>2.44</td>
+<td>10.3</td>
+</tr>
+</tbody>
+</table>
+<p>Observed <code>k</code> is <strong>1.51</strong>; the products give <strong>2.18 and 2.92</strong>, too few calm days <em>and</em> too few windy ones.</p>
+<p><strong>At airports, where the level is right, both under-predict power density:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>source</th>
+<th>speed ratio</th>
+<th>power ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LOCA2</td>
+<td>0.977</td>
+<td><strong>0.812</strong></td>
+</tr>
+<tr class="even">
+<td>WRF</td>
+<td>1.077</td>
+<td><strong>0.875</strong></td>
+</tr>
+<tr class="odd">
+<td>ERA5</td>
+<td>0.757</td>
+<td>0.355</td>
+</tr>
+</tbody>
+</table>
+<p>A product matching observed mean wind to within 8 % delivers <strong>13–19 % less power density</strong>, the number a resource assessment or calculation will inherit.</p>
+<section id="upper-tail" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="upper-tail">Upper tail</h3>
+<div id="fig-extremes" class="column-page-inset quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-extremes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="extremes_stations">
+  <iframe src="../figures/html/extremes_stations.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-extremes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Daily maxima, observed against modelled. Quantile ratios fall monotonically toward q99, so the distribution is too narrow at the top rather than merely displaced.
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>group</th>
+<th>mean ratio</th>
+<th>q90 ratio</th>
+<th>q99 ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>all stations</td>
+<td>1.124</td>
+<td>0.974</td>
+<td><strong>0.867</strong></td>
+</tr>
+<tr class="even">
+<td>airports</td>
+<td>0.835</td>
+<td>0.786</td>
+<td><strong>0.782</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The ratios fall monotonically with quantile.</strong> A scale-factor error would keep them flat. Falling ratios mean the modelled distribution is too narrow at the top, agreeing with the Weibull shape above, arrived at independently from daily maxima.</p>
+<hr>
+</section>
+</section>
+<section id="sec-seasonal" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-seasonal">6. Seasonal and regional structure</h2>
+<div id="fig-seasonal" class="column-page-inset quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-seasonal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="seasonal_stations">
+  <iframe src="../figures/html/seasonal_stations.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-seasonal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Seasonal cycle of agreement at station locations. Nearly flat, with a mild winter excess.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>The seasonal cycle of agreement is resolved comparably across regions.</li>
+<li><strong>Both products agree slightly better in summer than in winter.</strong></li>
+<li><strong>LOCA2 peaks in January almost everywhere</strong> (6 of 8 regions) while WRF’s peak month scatters across October, November, December, January and May, a statistical method inheriting one domain-wide seasonal signature, and a dynamical model producing region-specific seasonality.</li>
+</ul>
+<section id="regional-structure" class="level3">
+<h3 class="anchored" data-anchor-id="regional-structure">6.1 Regional structure</h3>
+<div id="fig-regions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-regions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="region_assignment">
+  <iframe src="../figures/html/region_assignment.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Region assignment from station coordinates and elevation. Worth checking before reading the table below — the boxes are approximate and go wrong at edges.
+</figcaption>
+</figure>
+</div>
+<div id="fig-agreement-region" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-agreement-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="agreement_by_region">
+  <iframe src="../figures/html/agreement_by_region.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-agreement-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Agreement by California climate region: median, spread, and the airport-only subset. The airport column is the unconfounded one.
+</figcaption>
+</figure>
+</div>
+<p><strong>Agreement is regionally uniform at airports and regionally structured everywhere else.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>region</th>
+<th>n_air</th>
+<th>LOCA2</th>
+<th>WRF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North Coast</td>
+<td>12</td>
+<td>1.122</td>
+<td>1.050</td>
+</tr>
+<tr class="even">
+<td>Bay &amp; Delta</td>
+<td>25</td>
+<td>1.046</td>
+<td><strong>0.811</strong></td>
+</tr>
+<tr class="odd">
+<td>Central Coast</td>
+<td>8</td>
+<td>0.983</td>
+<td>0.917</td>
+</tr>
+<tr class="even">
+<td>South Coast</td>
+<td>60</td>
+<td>1.052</td>
+<td>0.952</td>
+</tr>
+<tr class="odd">
+<td>Sierra Nevada</td>
+<td>11</td>
+<td>1.018</td>
+<td>1.106</td>
+</tr>
+<tr class="even">
+<td>Central Valley</td>
+<td>25</td>
+<td>0.996</td>
+<td>1.064</td>
+</tr>
+<tr class="odd">
+<td>Mojave/Sonoran</td>
+<td>46</td>
+<td><strong>0.873</strong></td>
+<td>1.020</td>
+</tr>
+<tr class="even">
+<td>Northeast</td>
+<td>10</td>
+<td><strong>0.827</strong></td>
+<td>1.110</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Most regions sit within ±10 % of 1.0 for both products.</strong> The domain-wide airport result of §2 is not an average of large opposing regional errors; it holds region by region.</p>
+<p><strong>The exceptions are informative and not shared.</strong> LOCA2 runs low in the Mojave (0.873) and Northeast (0.827). The two most arid, thermally driven regions, where WRF is fine (1.020, 1.110). WRF runs low in the Bay &amp; Delta (0.811), the one region whose wind climate is dominated by a sea breeze through a single topographic feature. <strong>Each product fails in a regime the other handles.</strong></p>
+<hr>
+</section>
+</section>
+<section id="sec-era5" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-era5">7. ERA5: where and when coarse and fine fields diverge</h2>
+<p>Used as a common grid and a diagnostic, not as truth, and for the one thing it is uniquely good for: complete uniform coverage, which supplies a <strong>control region</strong> where the mechanism under test should switch off.</p>
+<div id="fig-ratio-region" class="column-page-inset quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ratio-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="fig-frame" data-fig="ratio_by_region">
+  <iframe src="../figures/html/ratio_by_region.html" loading="lazy" scrolling="no"></iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ratio-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Ratio against ERA5 by region and terrain. WRF’s response rises with sub-grid relief; LOCA2’s stays flat, the signature of a statistically downscaled field inheriting a smoother target.
+</figcaption>
+</figure>
+</div>
+<p><strong>Over open water the km-scale models and ERA5 agree to within half a percent. Over land they diverge by 52–62 %.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>product</th>
+<th>ocean</th>
+<th>coastal</th>
+<th>land</th>
+<th>pooled</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WRF</td>
+<td><strong>0.995</strong></td>
+<td>1.167</td>
+<td><strong>1.617</strong></td>
+<td>1.458</td>
+</tr>
+<tr class="even">
+<td>CONUS404</td>
+<td><strong>0.996</strong></td>
+<td>1.180</td>
+<td><strong>1.522</strong></td>
+<td>1.124</td>
+</tr>
+<tr class="odd">
+<td>LOCA2</td>
+<td>—</td>
+<td>1.163</td>
+<td>1.289</td>
+<td>1.285</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>The ocean column is a positive control and it is decisive.</strong> WRF 0.995 and CONUS404 0.996. Two independently configured 3–4 km models agreeing with a 31 km reanalysis to within 0.5 % where there is no sub-grid terrain to resolve.</p>
+<p>A calibration error would bias a model <em>everywhere</em>, including over water. It does not. <strong>So the land disagreement is a resolution difference, not an error.</strong></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="what-this-means-for-the-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-means-for-the-matrix">8. What this means for the matrix</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>dimension</th>
+<th>LOCA2</th>
+<th>WRF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean bias</td>
+<td>✅ 0.996 at airports</td>
+<td>✅ 0.995 at airports</td>
+</tr>
+<tr class="even">
+<td>spatial pattern</td>
+<td>⚠️ too smooth (0.902 vs CONUS404)</td>
+<td>✅ 1.020 vs CONUS404</td>
+</tr>
+<tr class="odd">
+<td>terrain response</td>
+<td>⚠️ flat across elevation bands</td>
+<td>✅ tracks sub-grid relief</td>
+</tr>
+<tr class="even">
+<td>seasonal structure</td>
+<td>✅ flat ratio, one domain-wide peak</td>
+<td>✅ flat ratio, regional peaks</td>
+</tr>
+<tr class="odd">
+<td>diurnal structure</td>
+<td>❓ no hourly data</td>
+<td>❓ — hourly analysis not done</td>
+</tr>
+<tr class="even">
+<td>extremes</td>
+<td>❓ no max-wind variable</td>
+<td>⚠️ tail 13 % short at q99</td>
+</tr>
+<tr class="odd">
+<td>distribution shape</td>
+<td>⚠️ k = 2.18 vs 1.51</td>
+<td>⚠️ k = 2.92 vs 1.51</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The pattern across the row is the finding.</strong> Both products pass on level and fail on shape. The use cases users actually bring would determine whether this limitation is critical.</p>
+<hr>
+</section>
+<section id="caveats" class="level2">
+<h2 class="anchored" data-anchor-id="caveats">9. Caveats</h2>
+<section id="on-the-observational-reference" class="level3">
+<h3 class="anchored" data-anchor-id="on-the-observational-reference">On the observational reference</h3>
+<ol type="1">
+<li><strong>Only airports are unobstructed.</strong> Every other class confounds model error with shelter (§2)..</li>
+<li><strong>Footprint.</strong> A station is a point; a LOCA2 cell averages 9 km² and an ERA5 cell ~950 km². Part of §2’s “only a third within ±10 %” is this and cannot be removed.</li>
+<li><strong>A calm floor.</strong> 13.2 % of hourly observations are exactly zero, the ASOS/AWOS sub-3-kt convention. No model reproduces it, so observed means are biased low and <strong>every ratio here is slightly generous to the model</strong>.</li>
+<li><strong>Reporting quantisation.</strong> Harmless for means; relevant to §5’s Weibull fits and quantile ratios.</li>
+<li><strong>338 of 1,207 stations screened out</strong>, 292 for records under 60 months. The retained 869 are not a random sample of the archive.</li>
+<li><strong>Coverage gaps.</strong> No ocean stations, and few unobstructed high-terrain stations, the Sierra has 11 airports against 73 RAWS. The products are least verifiable exactly where §7 shows they diverge most from ERA5.</li>
+</ol>
+</section>
+<section id="on-what-is-not-measured" class="level3">
+<h3 class="anchored" data-anchor-id="on-what-is-not-measured">On what is not measured</h3>
+<ol start="11" type="1">
+<li><strong>No uncertainty.</strong> Every result is a median with no bootstrap, no confidence interval, no effective sample size for autocorrelated series.</li>
+<li><strong>No hourly data in this analysis</strong>, so no diurnal analysis. It is not settled how valid a model-against-hourly-station comparison would be.</li>
+<li><strong>Historical only.</strong> No check that skill is stationary under warming.</li>
+</ol>
+<hr>
+<!-- ## 10. Summary??? -->
+<hr>
+</section>
+</section>
+<section id="worth-doing-next" class="level2">
+<h2 class="anchored" data-anchor-id="worth-doing-next">Worth doing next</h2>
+<ol type="1">
+<li><strong>Bootstrap everything</strong>: every headline number is a point estimate.</li>
+<li><strong>Diagnose the distribution shape error</strong> : is it effective resolution, temporal averaging, or the PBL scheme?</li>
+<li><strong>Analyse hourly wind</strong>.</li>
+</ol>
+<hr>
+<p><em>Method: <a href="../method/scope-and-definitions.html">Scope &amp; Definitions</a>. Full diagnostics: <code>notebooks/wind_speed_review.ipynb</code>. Evidence IDs resolve on the <a href="../references.html">References</a> page.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>AE Data Quality &amp; Documentation Pillar · draft</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

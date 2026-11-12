@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-12">
+
+<title>References – AE Data Quality Guidance</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="figures/heights.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">AE Data Quality Guidance</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-method" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Method</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-method">    
+        <li>
+    <a class="dropdown-item" href="./method/scope-and-definitions.html">
+ <span class="dropdown-text">Scope &amp; Definitions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./method/provenance.html">
+ <span class="dropdown-text">Provenance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./guidance/recommendation.html">
+ <span class="dropdown-text">Recommendation Matrix</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-variables" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Variables</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-variables">    
+        <li>
+    <a class="dropdown-item" href="./variables/wind-speed.html">
+ <span class="dropdown-text">Wind speed</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guidance" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Guidance</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-guidance">    
+        <li>
+    <a class="dropdown-item" href="./guidance/recommendation.html">
+ <span class="dropdown-text">Recommendation Matrix</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./guidance/variable-cards.html">
+ <span class="dropdown-text">Variable Cards</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./guidance/catalog-audit.html">
+ <span class="dropdown-text">Catalog Audit</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="./references.html" aria-current="page"> 
+<span class="menu-text">References</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link active" data-scroll-target="#quick-reference">Quick reference</a>
+  <ul class="collapse">
+  <li><a href="#lit-review-sources-r-q" id="toc-lit-review-sources-r-q" class="nav-link" data-scroll-target="#lit-review-sources-r-q">Lit-review sources (R##, Q##)</a></li>
+  <li><a href="#open-questions-dq" id="toc-open-questions-dq" class="nav-link" data-scroll-target="#open-questions-dq">Open questions (DQ##)</a></li>
+  </ul></li>
+  <li><a href="#source-details" id="toc-source-details" class="nav-link" data-scroll-target="#source-details">Source details</a>
+  <ul class="collapse">
+  <li><a href="#R01" id="toc-R01" class="nav-link" data-scroll-target="#R01">R01 — Is Bias Correction in Dynamical Downscaling Defensible?</a></li>
+  <li><a href="#R02" id="toc-R02" class="nav-link" data-scroll-target="#R02">R02 — LOCA Version 2 for North America (ca. Jan 2023)</a></li>
+  <li><a href="#R03" id="toc-R03" class="nav-link" data-scroll-target="#R03">R03 — LOCA2 (CMIP6) Validation and Verification Plots</a></li>
+  <li><a href="#R04" id="toc-R04" class="nav-link" data-scroll-target="#R04">R04 — California 3 km LOCA2 Hybrid Downscaling Validation Plots</a></li>
+  <li><a href="#R05" id="toc-R05" class="nav-link" data-scroll-target="#R05">R05 — Observed humidity trends in dry regions contradict climate models</a></li>
+  <li><a href="#R06" id="toc-R06" class="nav-link" data-scroll-target="#R06">R06 — DRAFT - Data Justification Memo for California’s Fifth Climate Change Assessment: Climate Adjusted Synthetic Relative Humidity Data</a></li>
+  <li><a href="#R07" id="toc-R07" class="nav-link" data-scroll-target="#R07">R07 — Future humidity trends over the western United States in the CMIP5 global climate models and variable infiltration capacity hydrological modeling system</a></li>
+  <li><a href="#R08" id="toc-R08" class="nav-link" data-scroll-target="#R08">R08 — Statistical Downscaling Using Localized Constructed Analogs (LOCA)</a></li>
+  <li><a href="#R09" id="toc-R09" class="nav-link" data-scroll-target="#R09">R09 — Improved Bias Correction Techniques for Hydrological Simulations of Climate Change</a></li>
+  <li><a href="#R10" id="toc-R10" class="nav-link" data-scroll-target="#R10">R10 — Downscaling humidity with Localized Constructed Analogs (LOCA) over the conterminous United States</a></li>
+  <li><a href="#R11" id="toc-R11" class="nav-link" data-scroll-target="#R11">R11 — Future Increases in North American Extreme Precipitation in CMIP6 downscaled with LOCA</a></li>
+  <li><a href="#R12" id="toc-R12" class="nav-link" data-scroll-target="#R12">R12 — An overview of the Western United States Dynamically Downscaled Dataset (WUS-D3)</a></li>
+  <li><a href="#R13" id="toc-R13" class="nav-link" data-scroll-target="#R13">R13 — Understanding the Cascade: Removing GCM Biases Improves Dynamically Downscaled Climate Projections</a></li>
+  <li><a href="#R14" id="toc-R14" class="nav-link" data-scroll-target="#R14">R14 — Bias Correction in the WRF and LOCA version 2 Projections (Data Adoption Justification Memo, CA 5th Climate Change Assessment)</a></li>
+  <li><a href="#R15" id="toc-R15" class="nav-link" data-scroll-target="#R15">R15 — LOCA version 2 Hybrid Downscaling (Data Justification Memo)</a></li>
+  <li><a href="#R16" id="toc-R16" class="nav-link" data-scroll-target="#R16">R16 — LOCA Version 2 - Training Data (Data Justification Memo)</a></li>
+  <li><a href="#R17" id="toc-R17" class="nav-link" data-scroll-target="#R17">R17 — Memo on WRF Downscaling with Bias Corrected Boundary Conditions (the four ‘new’ GCMs)</a></li>
+  <li><a href="#R18" id="toc-R18" class="nav-link" data-scroll-target="#R18">R18 — Evaluation of the Mountain Hydroclimate across the Western United States in Dynamically Downscaled Climate Models</a></li>
+  <li><a href="#R19" id="toc-R19" class="nav-link" data-scroll-target="#R19">R19 — CMIP6 Downscaling Using WRF (UCLA Alex Hall Research Group project page)</a></li>
+  <li><a href="#Q01" id="toc-Q01" class="nav-link" data-scroll-target="#Q01">Q01 — Relative Humidity Sensitivity Analysis: Fosberg Fire Weather Index</a></li>
+  <li><a href="#Q02" id="toc-Q02" class="nav-link" data-scroll-target="#Q02">Q02 — Evaluating Pyregence Synthetic Relative Humidity Product</a></li>
+  <li><a href="#Q03" id="toc-Q03" class="nav-link" data-scroll-target="#Q03">Q03 — LOCA2 wind speed and direction investigation: Original NetCDF files</a></li>
+  <li><a href="#Q04" id="toc-Q04" class="nav-link" data-scroll-target="#Q04">Q04 — RH Sensitivity Analysis Plan for Cal-Adapt: AE</a></li>
+  <li><a href="#R20" id="toc-R20" class="nav-link" data-scroll-target="#R20">R20 — Personal communication on LOCA2 CA hybrid wind speed construction</a></li>
+  <li><a href="#Q05" id="toc-Q05" class="nav-link" data-scroll-target="#Q05">Q05 — Cal-Adapt downscaled products vs ERA5: 10 m wind agreement over California (v2)</a></li>
+  </ul></li>
+  <li><a href="#open-questions-dq-details" id="toc-open-questions-dq-details" class="nav-link" data-scroll-target="#open-questions-dq-details">Open questions (DQ##) — details</a>
+  <ul class="collapse">
+  <li><a href="#DQ1" id="toc-DQ1" class="nav-link" data-scroll-target="#DQ1">DQ1</a></li>
+  <li><a href="#DQ2" id="toc-DQ2" class="nav-link" data-scroll-target="#DQ2">DQ2</a></li>
+  <li><a href="#DQ3" id="toc-DQ3" class="nav-link" data-scroll-target="#DQ3">DQ3</a></li>
+  <li><a href="#DQ4" id="toc-DQ4" class="nav-link" data-scroll-target="#DQ4">DQ4</a></li>
+  <li><a href="#DQ5" id="toc-DQ5" class="nav-link" data-scroll-target="#DQ5">DQ5</a></li>
+  <li><a href="#DQ6" id="toc-DQ6" class="nav-link" data-scroll-target="#DQ6">DQ6</a></li>
+  <li><a href="#DQ7" id="toc-DQ7" class="nav-link" data-scroll-target="#DQ7">DQ7</a></li>
+  <li><a href="#DQ8" id="toc-DQ8" class="nav-link" data-scroll-target="#DQ8">DQ8</a></li>
+  <li><a href="#DQ9" id="toc-DQ9" class="nav-link" data-scroll-target="#DQ9">DQ9</a></li>
+  <li><a href="#DQ10" id="toc-DQ10" class="nav-link" data-scroll-target="#DQ10">DQ10</a></li>
+  <li><a href="#DQ11" id="toc-DQ11" class="nav-link" data-scroll-target="#DQ11">DQ11</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">References</h1>
+<p class="subtitle lead">Lit-review sources (R##, Q##) and open questions (DQ##) behind every evidence ID</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 12, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Every <code>R##</code> / <code>Q##</code> / <code>DQ##</code> citation used across this site is exported from the internal lit-review database (<code>lit_review</code> and <code>open_questions</code> tabs). Edit the source spreadsheet and re-export <code>data/lit_review.csv</code> / <code>data/open_questions.csv</code> to update this page — it does not call out to the sheet live.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Click any <code>R##</code> / <code>Q##</code> / <code>DQ##</code> mention elsewhere on this site to jump straight to its entry below.</p>
+</div>
+</div>
+</div>
+<section id="quick-reference" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reference">Quick reference</h2>
+<section id="lit-review-sources-r-q" class="level3">
+<h3 class="anchored" data-anchor-id="lit-review-sources-r-q">Lit-review sources (R##, Q##)</h3>
+<div id="bc8111aa" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Title</th>
+<th data-quarto-table-cell-role="th">Short citation</th>
+<th data-quarto-table-cell-role="th">Genre</th>
+<th data-quarto-table-cell-role="th">Relevance</th>
+<th data-quarto-table-cell-role="th">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>R01</td>
+<td>Is Bias Correction in Dynamical Downscaling De...</td>
+<td>Risser et al. 2024 (GRL 51, e2023GL105979)</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>R02</td>
+<td>LOCA Version 2 for North America (ca. Jan 2023)</td>
+<td>Pierce / Scripps (UCSD) 2023</td>
+<td>Dataset documentation</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>R03</td>
+<td>LOCA2 (CMIP6) Validation and Verification Plots</td>
+<td>Pierce / Scripps (UCSD) 2023</td>
+<td>Validation page</td>
+<td>Medium</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>R04</td>
+<td>California 3 km LOCA2 Hybrid Downscaling Valid...</td>
+<td>Pierce / Scripps (UCSD) 2023</td>
+<td>Validation page</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>R05</td>
+<td>Observed humidity trends in dry regions contra...</td>
+<td>Simpson et al. 2024 (PNAS 121(1), e2302480120)</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>R06</td>
+<td>DRAFT - Data Justification Memo for California...</td>
+<td>Westerling, Baldwin, Romsos &amp; Saah (Pyregence,...</td>
+<td>Memo</td>
+<td>High</td>
+<td>Read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>R07</td>
+<td>Future humidity trends over the western United...</td>
+<td>Pierce, Westerling &amp; Oyler 2013 (HESS 17(5), 1...</td>
+<td>Peer-reviewed paper</td>
+<td>Medium</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>R08</td>
+<td>Statistical Downscaling Using Localized Constr...</td>
+<td>Pierce, Cayan &amp; Thrasher 2014 (J. Hydrometeoro...</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>R09</td>
+<td>Improved Bias Correction Techniques for Hydrol...</td>
+<td>Pierce et al. 2015 (J. Hydrometeorol. 16(6), 2...</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>R10</td>
+<td>Downscaling humidity with Localized Constructe...</td>
+<td>Pierce &amp; Cayan 2015</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>R11</td>
+<td>Future Increases in North American Extreme Pre...</td>
+<td>Pierce, Cayan, Feldman &amp; Risser 2023 (J. Hydro...</td>
+<td>Peer-reviewed paper</td>
+<td>Medium</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>R12</td>
+<td>An overview of the Western United States Dynam...</td>
+<td>Rahimi et al. 2024 (Geosci. Model Dev. 17, 226...</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">12</th>
+<td>R13</td>
+<td>Understanding the Cascade: Removing GCM Biases...</td>
+<td>Rahimi et al. 2024 (Geophys. Res. Lett. 51(10))</td>
+<td>Peer-reviewed paper</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">13</th>
+<td>R14</td>
+<td>Bias Correction in the WRF and LOCA version 2 ...</td>
+<td>Pierce, Rahimi, Cayan &amp; Kalansky 2023 (CEC EPC...</td>
+<td>Memo</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">14</th>
+<td>R15</td>
+<td>LOCA version 2 Hybrid Downscaling (Data Justif...</td>
+<td>Pierce, Cayan, Rahimi &amp; Kalansky 2023 (CEC EPC...</td>
+<td>Memo</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">15</th>
+<td>R16</td>
+<td>LOCA Version 2 - Training Data (Data Justifica...</td>
+<td>Pierce, Rahimi, Iacobellis, Cayan &amp; Kalansky 2...</td>
+<td>Memo</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">16</th>
+<td>R17</td>
+<td>Memo on WRF Downscaling with Bias Corrected Bo...</td>
+<td>Rahimi, Pierce, Cayan &amp; Kalansky 2024 (CEC EPC...</td>
+<td>Memo</td>
+<td>Medium</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">17</th>
+<td>R18</td>
+<td>Evaluation of the Mountain Hydroclimate across...</td>
+<td>Adhikari, Geerts, Rahimi-Esfarjani, Smith, Shu...</td>
+<td>Peer-reviewed paper</td>
+<td>Medium</td>
+<td>To read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">18</th>
+<td>R19</td>
+<td>CMIP6 Downscaling Using WRF (UCLA Alex Hall Re...</td>
+<td>Alex Hall Research Group, UCLA (accessed Jul 2...</td>
+<td>Website</td>
+<td>High</td>
+<td>To read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">19</th>
+<td>Q01</td>
+<td>Relative Humidity Sensitivity Analysis: Fosber...</td>
+<td>Cal-Adapt AE 2025 (update: Nicole, Mar 2026)</td>
+<td>Internal doc</td>
+<td>High</td>
+<td>Read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">20</th>
+<td>Q02</td>
+<td>Evaluating Pyregence Synthetic Relative Humidi...</td>
+<td>Cal-Adapt AE 2025 (Will Krantz)</td>
+<td>Internal doc</td>
+<td>High</td>
+<td>Read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">21</th>
+<td>Q03</td>
+<td>LOCA2 wind speed and direction investigation: ...</td>
+<td>Cal-Adapt AE 2025 (Ana Ordonez)</td>
+<td>Internal doc</td>
+<td>High</td>
+<td>Read</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">22</th>
+<td>Q04</td>
+<td>RH Sensitivity Analysis Plan for Cal-Adapt: AE</td>
+<td>Cal-Adapt AE 2025</td>
+<td>Internal doc</td>
+<td>High</td>
+<td>Read</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">23</th>
+<td>R20</td>
+<td>Personal communication on LOCA2 CA hybrid wind...</td>
+<td>D. Pierce (Scripps), pers. comm., August 2026 ...</td>
+<td>Personal communication</td>
+<td>High</td>
+<td>Received</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">24</th>
+<td>Q05</td>
+<td>Cal-Adapt downscaled products vs ERA5: 10 m wi...</td>
+<td>AE internal analysis (H. Inda-Diaz), 2026</td>
+<td>Internal analysis</td>
+<td>High</td>
+<td>Draft</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="open-questions-dq" class="level3">
+<h3 class="anchored" data-anchor-id="open-questions-dq">Open questions (DQ##)</h3>
+<div id="e8bc4487" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">DQ ID</th>
+<th data-quarto-table-cell-role="th">Question</th>
+<th data-quarto-table-cell-role="th">Status</th>
+<th data-quarto-table-cell-role="th">Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>DQ1</td>
+<td>Is the RH trend switch at GWL&gt;=2.5 driven by o...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>DQ2</td>
+<td>Is FFWI usable at GWL&gt;=2.5, and is the FFWI=50...</td>
+<td>Open - preliminary caution issued</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>DQ3</td>
+<td>Does WRF downscaling preserve the RH trends of...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>DQ4</td>
+<td>Why does wspeed differ from sqrt(uas^2 + vas^2...</td>
+<td>Resolved (Scripps, R20)</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>DQ5</td>
+<td>What bias correction was applied to the LOCA2 ...</td>
+<td>Open - memo obtained, does not document it</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>DQ6</td>
+<td>Are the projected wind speed decreases robust ...</td>
+<td>Open</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>DQ7</td>
+<td>Is the spatial variability of wind and RH tren...</td>
+<td>Open</td>
+<td>Medium</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>DQ8</td>
+<td>Is the RH bias constant in time, or does it ch...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>DQ9</td>
+<td>Can a station-derived RH adjustment (HadISD de...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>DQ10</td>
+<td>Which AE derived variables and metrics depend ...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>DQ11</td>
+<td>Is the memo's claim correct that bias correcti...</td>
+<td>Open</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="source-details" class="level2">
+<h2 class="anchored" data-anchor-id="source-details">Source details</h2>
+<section id="R01" class="level3">
+<h3 class="anchored" data-anchor-id="R01">R01 — <a href="https://doi.org/10.1029/2023GL105979">Is Bias Correction in Dynamical Downscaling Defensible?</a></h3>
+<p><em>Risser et al.&nbsp;2024 (GRL 51, e2023GL105979)</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> Tests whether a priori bias correction (APBC) of GCM boundary conditions before dynamical downscaling is justified.</p>
+<p><strong>Key findings.</strong> APBC adds negligible uncertainty for temperature and precipitation relative to GCM choice and internal variability. Snow projections without APBC are physically unrealistic. Minimally invasive APBC preserves GCM trends at regional scales.</p>
+<p><strong>Datasets:</strong> WRF (WUS-D3) · <strong>Variables:</strong> Temperature, precipitation, snow · <strong>Methods:</strong> A priori bias correction of boundary conditions; comparison of uncertainty sources</p>
+<p><strong>Feeds:</strong> Phase 2 proposal; Sec 4 methods shortlist; provenance flowchart (pre-downscaling branch)</p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Core justification for the APBC step already applied upstream of AE WRF data</p>
+</blockquote>
+<hr>
+</section>
+<section id="R02" class="level3">
+<h3 class="anchored" data-anchor-id="R02">R02 — <a href="https://loca.ucsd.edu/loca-version-2-for-north-america-ca-jan-2023/">LOCA Version 2 for North America (ca. Jan 2023)</a></h3>
+<p><em>Pierce / Scripps (UCSD) 2023</em> · Dataset documentation · Sec 0</p>
+<p><strong>Summary.</strong> Official documentation page for the LOCA2 downscaled dataset.</p>
+<p><strong>Key findings.</strong> LOCA2 CMIP6 at 6 km, daily Tmin/Tmax/precip 1950-2100, SSP245/370/585, 27 GCMs / 329 members. Humidity in progress. Wind is not statistically downscaled - supports the LOCA2-barely-carries-wind caveat.</p>
+<p><strong>Datasets:</strong> LOCA2 (NAmer 6 km) · <strong>Variables:</strong> Tmax, Tmin, precipitation · <strong>Methods:</strong> LOCA2 statistical downscaling and its bias correction step</p>
+<p><strong>Feeds:</strong> Per-dataset bias adjustment documentation; variable cards</p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Methodology papers are listed in the LOCA bibliography page - chase and add as separate rows</p>
+</blockquote>
+<hr>
+</section>
+<section id="R03" class="level3">
+<h3 class="anchored" data-anchor-id="R03">R03 — <a href="https://loca.ucsd.edu/~pierce/analysis2/">LOCA2 (CMIP6) Validation and Verification Plots</a></h3>
+<p><em>Pierce / Scripps (UCSD) 2023</em> · Validation page · Sec 3</p>
+<p><strong>Summary.</strong> Historical validation plots for LOCA2 against observations.</p>
+<p><strong>Key findings.</strong> Means, seasonal cycles, percentiles, return values (20-250 yr), wet spells, humidity metrics. Ready-made figure source.</p>
+<p><strong>Datasets:</strong> LOCA2 (NAmer 6 km) · <strong>Variables:</strong> Precipitation, Tmin, Tmax, DTR, specific humidity, RH · <strong>Methods:</strong> Observation-based validation; return value analysis</p>
+<p><strong>Feeds:</strong> Good/bad matrix; data challenges page; figure source for guidance doc</p>
+<p><strong>Relevance:</strong> Medium · <strong>Status:</strong> To read</p>
+<hr>
+</section>
+<section id="R04" class="level3">
+<h3 class="anchored" data-anchor-id="R04">R04 — <a href="https://loca.ucsd.edu/~pierce/analysis_CAhyb/">California 3 km LOCA2 Hybrid Downscaling Validation Plots</a></h3>
+<p><em>Pierce / Scripps (UCSD) 2023</em> · Validation page · Sec 1</p>
+<p><strong>Summary.</strong> Validation plots for the CA 3 km hybrid WRF/LOCA2 product, including winds.</p>
+<p><strong>Key findings.</strong> Includes 10 m wind validated against observations (seasonal means, percentiles, daily max/min), plus RH and downward shortwave vs GOES. One of the few obs-vs-model wind comparisons available for AE-relevant data.</p>
+<p><strong>Datasets:</strong> Hybrid WRF/LOCA2 (CA 3 km) · <strong>Variables:</strong> 10 m wind (uas/vas + speed), RH min/max, specific humidity, rsds, precipitation, Tmin, Tmax · <strong>Methods:</strong> Observation-based wind validation</p>
+<p><strong>Feeds:</strong> Wind pilot Sec 3; good/bad matrix; RH report; figure source for guidance doc</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Highest-value single source for the wind pilot - start here</p>
+</blockquote>
+<hr>
+</section>
+<section id="R05" class="level3">
+<h3 class="anchored" data-anchor-id="R05">R05 — <a href="https://www.pnas.org/doi/10.1073/pnas.2302480120">Observed humidity trends in dry regions contradict climate models</a></h3>
+<p><em>Simpson et al.&nbsp;2024 (PNAS 121(1), e2302480120)</em> · Peer-reviewed paper · Sec 1</p>
+<p><strong>Summary.</strong> Documents the mismatch between observed and modelled humidity trends in arid regions.</p>
+<p><strong>Key findings.</strong> CMIP6 models fail to reproduce observed drying (negative RH / vapor pressure trends) in arid and semi-arid regions including the SW US. ERA5 shows a much stronger negative RH trend than the GCMs. This is the root paper behind the AE RH concern.</p>
+<p><strong>Datasets:</strong> CMIP6 GCMs, ERA5 · <strong>Variables:</strong> RH, vapor pressure · <strong>Methods:</strong> Linear trend fitting on observed vs modelled RH</p>
+<p><strong>Feeds:</strong> RH report (core citation); good/bad matrix</p>
+<p><strong>Related questions:</strong> <a href="#DQ1">DQ1</a>, <a href="#DQ3">DQ3</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Cited in <a href="#Q02">Q02</a>; Will reproduced its ERA5 trends in Appendix B. Citation verified Jul 2026: the article was published online 26 Dec 2023 but carries a 2 Jan 2024 issue date, so some databases (OSTI, DOE EESM) list it as 2023. The volume is 121, not 120 - the trailing 120 in the DOI is PNAS submission-era numbering, not the volume.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R06" class="level3">
+<h3 class="anchored" data-anchor-id="R06">R06 — DRAFT - Data Justification Memo for California’s Fifth Climate Change Assessment: Climate Adjusted Synthetic Relative Humidity Data</h3>
+<p><em>Westerling, Baldwin, Romsos &amp; Saah (Pyregence, draft)</em> · Memo · Sec 4</p>
+<p><strong>Summary.</strong> The Pyregence team’s own justification for replacing downscaled RH with a statistically derived synthetic product, plus full model specification and data access.</p>
+<p><strong>Key findings.</strong> Motivation: over the 2000-2020 overlap, GCM-simulated RH is significantly wetter than observed, and observed California RH has a declining trend that the simulations do not reproduce - so fire models calibrated on observations project immediately decreasing fire activity regardless of scenario. KEY CLAIM FOR PHASE 2: the authors argue bias correction can adjust modest discrepancies in mean or variance but CANNOT correct differences in long-term trends, which is why they rebuilt RH rather than correcting it. Authors’ own stated limitations: the model omits large-scale atmospheric moisture transport, underestimates wet extremes of daily max RH, and has no dew point representation so max RH never spikes to 100%. They state the impact is muted for fire models because those are most sensitive to daily MINIMUM RH. Model skill: ~66% of variance explained for rmin, ~45% for rmax. Authors explicitly caution other sectors to assess suitability before using it as a replacement.</p>
+<p><strong>Datasets:</strong> Pyregence synthetic RH; source data = ERA5 WRF (1950-2021), UCLA WRF bias-corrected, LOCA2 · <strong>Variables:</strong> RH (daily min/max), tmx, tmn, prc, elevation, aspect · <strong>Methods:</strong> Semiparametric GAM via bam() in R mgcv, with spline-smoothed interaction terms. RH fractions logit-transformed to unbounded variables. Final form: rmin2 ~ s(tmx,tmn,prc) + s(t90,p90) + s(elv,asp) + s(x,y). AIC-based selection on a 1M random subsample of &gt;1bn daily observations. Windspeed and 30/60-day leading averages were tested but not retained. A day-of-year seasonal term was deliberately excluded so seasonality would emerge from the climate data.</p>
+<p><strong>Feeds:</strong> Phase 2 proposal (the trend-vs-bias-correction claim is directly load-bearing); RH report; data challenges page</p>
+<p><strong>Related questions:</strong> <a href="#DQ3">DQ3</a>, <a href="#DQ5">DQ5</a>, <a href="#DQ8">DQ8</a>, <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Read</p>
+<blockquote class="blockquote">
+<p>Obtained Jul 2026, resolves the placeholder. Confirms <a href="#Q02">Q02</a>‘s reading of the input variables exactly. Still does NOT name the observational training dataset, and still documents no held-out validation - ’robust across randomly selected samples’ is a stability check, not an overfitting test. Crucially it documents NO additional bias correction step on the LOCA2 or WRF-ERA5 inputs, so the large LOCA2 bias shift <a href="#Q02">Q02</a> observed remains unexplained. Data access via ungoliant.ucmerced.edu (era5wrf/, wrf_bc/, loca2/) as Cloud-Optimized GeoTIFFs. Relevance raised from Medium to High.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R07" class="level3">
+<h3 class="anchored" data-anchor-id="R07">R07 — <a href="https://doi.org/10.5194/hess-17-1833-2013">Future humidity trends over the western United States in the CMIP5 global climate models and variable infiltration capacity hydrological modeling system</a></h3>
+<p><em>Pierce, Westerling &amp; Oyler 2013 (HESS 17(5), 1833-1850)</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> Prior work on deriving humidity for western US climate assessments using the VIC hydrological model.</p>
+<p><strong>Key findings.</strong> The methodological precedent <a href="#R06">R06</a> builds on and cites for its known limitation: like VIC-derived RH, a statistically/hydrologically derived humidity misses the portion of daily variability driven by large-scale atmospheric moisture transport. Establishes that this limitation is long-standing and not unique to the Pyregence approach.</p>
+<p><strong>Datasets:</strong> CMIP5 GCMs, VIC · <strong>Variables:</strong> RH, humidity · <strong>Methods:</strong> VIC hydrological modelling of humidity; CMIP5 humidity trend analysis</p>
+<p><strong>Feeds:</strong> RH report (background); Phase 2 proposal (prior art on derived-humidity limitations)</p>
+<p><strong>Related questions:</strong> <a href="#DQ3">DQ3</a>, <a href="#DQ8">DQ8</a></p>
+<p><strong>Relevance:</strong> Medium · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Chased from the <a href="#R06">R06</a> reference list. Pierce is also the author of <a href="#R02">R02</a>-<a href="#R04">R04</a>, so this connects the LOCA2 and Pyregence threads.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R08" class="level3">
+<h3 class="anchored" data-anchor-id="R08">R08 — <a href="https://doi.org/10.1175/JHM-D-14-0082.1">Statistical Downscaling Using Localized Constructed Analogs (LOCA)</a></h3>
+<p><em>Pierce, Cayan &amp; Thrasher 2014 (J. Hydrometeorol. 15, 2558-2585)</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> The core peer-reviewed description of the LOCA statistical downscaling method that underlies LOCA2.</p>
+<p><strong>Key findings.</strong> Analog-based downscaling. The LOCA system has two parts: bias correction and the downscaling step. This is the foundational method reference behind <a href="#R02">R02</a>-<a href="#R04">R04</a> and the LOCA2 hybrid.</p>
+<p><strong>Datasets:</strong> LOCA (CMIP5 origin), applies to LOCA2 · <strong>Variables:</strong> Temperature, precipitation · <strong>Methods:</strong> Localized constructed analogs; observationally trained</p>
+<p><strong>Feeds:</strong> 1a per-dataset bias adjustment documentation; variable cards</p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Named by the LOCA bibliography as the primary description of the method.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R09" class="level3">
+<h3 class="anchored" data-anchor-id="R09">R09 — <a href="https://doi.org/10.1175/JHM-D-14-0236.1">Improved Bias Correction Techniques for Hydrological Simulations of Climate Change</a></h3>
+<p><em>Pierce et al.&nbsp;2015 (J. Hydrometeorol. 16(6), 2421-2442)</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> The peer-reviewed bias correction method used in LOCA and LOCA2 - the quantile-preserving scheme.</p>
+<p><strong>Key findings.</strong> This is the actual LOCA bias correction (‘Pierce et al.&nbsp;2015a’ in the CEC memos): it preserves GCM-predicted trends by quantile. LOAD-BEARING FOR <a href="#DQ11">DQ11</a> - its trend-by-quantile preservation is the direct counter-case to test against the Pyregence memo’s claim that bias correction cannot fix trends.</p>
+<p><strong>Datasets:</strong> LOCA / LOCA2 · <strong>Variables:</strong> Temperature, precipitation · <strong>Methods:</strong> Quantile-preserving bias correction with trend preservation</p>
+<p><strong>Feeds:</strong> 1a documentation; Phase 2 proposal; DQ11</p>
+<p><strong>Related questions:</strong> <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>The standard LOCA BC scheme cited throughout the CEC memos.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R10" class="level3">
+<h3 class="anchored" data-anchor-id="R10">R10 — <a href="https://link.springer.com/article/10.1007/s00382-015-2845-1">Downscaling humidity with Localized Constructed Analogs (LOCA) over the conterminous United States</a></h3>
+<p><em>Pierce &amp; Cayan 2015</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> How humidity specifically is downscaled and bias-corrected within LOCA.</p>
+<p><strong>Key findings.</strong> The LOCA-side humidity method that sits underneath the RH bias story - relevant to how RH enters LOCA2. Connects the methods thread to the RH cluster (<a href="#Q01">Q01</a>, <a href="#Q02">Q02</a>, <a href="#Q04">Q04</a>, <a href="#R05">R05</a>, <a href="#R06">R06</a>).</p>
+<p><strong>Datasets:</strong> LOCA / LOCA2 · <strong>Variables:</strong> RH, humidity · <strong>Methods:</strong> LOCA analog downscaling applied to humidity</p>
+<p><strong>Feeds:</strong> RH report; 1a documentation; variable cards</p>
+<p><strong>Related questions:</strong> <a href="#DQ3">DQ3</a>, <a href="#DQ10">DQ10</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Confirm exact journal and DOI from the LOCA bibliography page (link is the finding aid, not the paper).</p>
+</blockquote>
+<hr>
+</section>
+<section id="R11" class="level3">
+<h3 class="anchored" data-anchor-id="R11">R11 — <a href="https://doi.org/10.1175/JHM-D-22-0194.1">Future Increases in North American Extreme Precipitation in CMIP6 downscaled with LOCA</a></h3>
+<p><em>Pierce, Cayan, Feldman &amp; Risser 2023 (J. Hydrometeorol.)</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> Introduces the LOCA2 multi-ensemble-member bias correction scheme.</p>
+<p><strong>Key findings.</strong> The ‘Pierce et al.&nbsp;2023’ pooled multi-member BC used in LOCA2: ensemble members are pooled and bias-corrected together to better preserve rare precipitation extremes. This is the specific LOCA2 (vs LOCA1) bias-correction change.</p>
+<p><strong>Datasets:</strong> LOCA2 · <strong>Variables:</strong> Precipitation (extremes) · <strong>Methods:</strong> Multi-ensemble-member pooled quantile bias correction</p>
+<p><strong>Feeds:</strong> 1a documentation; good/bad matrix (precip extremes)</p>
+<p><strong>Relevance:</strong> Medium · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Cited on the LOCA v1-vs-v2 page as the LOCA2 BC upgrade.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R12" class="level3">
+<h3 class="anchored" data-anchor-id="R12">R12 — <a href="https://doi.org/10.5194/gmd-17-2265-2024">An overview of the Western United States Dynamically Downscaled Dataset (WUS-D3)</a></h3>
+<p><em>Rahimi et al.&nbsp;2024 (Geosci. Model Dev. 17, 2265-2286)</em> · Peer-reviewed paper · Sec 1</p>
+<p><strong>Summary.</strong> The dataset-documentation paper for the WRF dynamical downscaling behind AE’s WRF data.</p>
+<p><strong>Key findings.</strong> Documents the WUS-D3 WRF configuration, GCM selection, data tiers (6-hourly / hourly / daily), and improvements over raw GCMs. The primary WRF dataset reference - the dynamical-downscaling counterpart to <a href="#R02">R02</a> for LOCA2. GCM selection explicitly considered surface wind patterns.</p>
+<p><strong>Datasets:</strong> WRF (WUS-D3); 9 km WUS + 3 km CA · <strong>Variables:</strong> 21 hourly + 30 daily variables incl.&nbsp;wind · <strong>Methods:</strong> WRF dynamical downscaling; ERA5-driven configuration (Rahimi et al.&nbsp;2022)</p>
+<p><strong>Feeds:</strong> 1a documentation; wind pilot Sec 1; provenance flowchart (WRF branch)</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a>, <a href="#DQ6">DQ6</a>, <a href="#DQ7">DQ7</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Open data on AWS (registry.opendata.aws/wrf-cmip6). The WRF equivalent of <a href="#R02">R02</a>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R13" class="level3">
+<h3 class="anchored" data-anchor-id="R13">R13 — <a href="https://doi.org/10.1029/2023GL106264">Understanding the Cascade: Removing GCM Biases Improves Dynamically Downscaled Climate Projections</a></h3>
+<p><em>Rahimi et al.&nbsp;2024 (Geophys. Res. Lett. 51(10))</em> · Peer-reviewed paper · Sec 4</p>
+<p><strong>Summary.</strong> The a priori bias correction (APBC) method for the WRF downscaling - correcting GCM biases before downscaling.</p>
+<p><strong>Key findings.</strong> The WRF-side counterpart to LOCA’s Pierce 2015 BC. Applies a priori BC of GCM boundary conditions before dynamical downscaling. Pairs with <a href="#R01">R01</a> (Risser ‘Defensible?’), which evaluates whether this exact APBC step is justified. Relevant to <a href="#DQ11">DQ11</a> and Phase 2.</p>
+<p><strong>Datasets:</strong> WRF (WUS-D3) · <strong>Variables:</strong> Temperature, precipitation, hydroclimate · <strong>Methods:</strong> A priori bias correction of GCM boundary conditions before dynamical downscaling</p>
+<p><strong>Feeds:</strong> 1a documentation; Phase 2 proposal; provenance flowchart (pre-downscaling WRF branch); DQ11</p>
+<p><strong>Related questions:</strong> <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p><a href="#R01">R01</a> evaluates the defensibility of the APBC this paper applies - treat them as a pair.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R14" class="level3">
+<h3 class="anchored" data-anchor-id="R14">R14 — <a href="https://www.energy.ca.gov/sites/default/files/2024-03/01_BiasCorrectioninWRF_and_LOCA2Projections_DataJustificationMemo_Pierce_Adopted_ada.pdf">Bias Correction in the WRF and LOCA version 2 Projections (Data Adoption Justification Memo, CA 5th Climate Change Assessment)</a></h3>
+<p><em>Pierce, Rahimi, Cayan &amp; Kalansky 2023 (CEC EPC-20-006)</em> · Memo · Sec 4</p>
+<p><strong>Summary.</strong> The high-level overview memo describing how bias correction is used in BOTH the WRF and LOCA2 products. *** Best single match for the WRF+LOCA2 bias-correction request. ***</p>
+<p><strong>Key findings.</strong> Explains that WRF and LOCA2 use different BC methods with different goals, and points to the individual product memos for specifics. The natural anchor document for the 1a bias-adjustment documentation deliverable - start here and branch out.</p>
+<p><strong>Datasets:</strong> WRF, LOCA2 · <strong>Variables:</strong> All · <strong>Methods:</strong> Overview: a priori (WRF) vs quantile-preserving (LOCA2) bias correction</p>
+<p><strong>Feeds:</strong> 1a documentation (anchor); provenance flowchart; guidance doc</p>
+<p><strong>Related questions:</strong> <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>CEC-adopted grey literature but authoritative. The best starting point for the documentation deliverable.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R15" class="level3">
+<h3 class="anchored" data-anchor-id="R15">R15 — <a href="https://www.energy.ca.gov/sites/default/files/2024-03/04_HybridDownscaling_DataJustificationMemo_Pierce_Adopted_ada.pdf">LOCA version 2 Hybrid Downscaling (Data Justification Memo)</a></h3>
+<p><em>Pierce, Cayan, Rahimi &amp; Kalansky 2023 (CEC EPC-20-006)</em> · Memo · Sec 0</p>
+<p><strong>Summary.</strong> Documents the CA 3 km LOCA2-hybrid product - the WRF-pattern-library + LOCA approach that is the actual cadcat CA hybrid data.</p>
+<p><strong>Key findings.</strong> The hybrid uses a WRF-derived pattern library plus the standard LOCA quantile-preserving BC (Pierce 2015a, = <a href="#R09">R09</a>). This is the exact product Ana investigated in <a href="#Q03">Q03</a> for the wspeed vs uas/vas discrepancy - it documents how that product was built.</p>
+<p><strong>Datasets:</strong> LOCA2 CA hybrid (3 km) · <strong>Variables:</strong> incl.&nbsp;10 m wind (uas/vas/wspeed) · <strong>Methods:</strong> WRF pattern library + LOCA analog + quantile-preserving BC</p>
+<p><strong>Feeds:</strong> 1a documentation; variable cards; provenance flowchart (hybrid branch); wind pilot</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Directly relevant to <a href="#Q03">Q03</a>/<a href="#DQ4">DQ4</a> - documents the CA hybrid product where the wind discrepancy appears.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R16" class="level3">
+<h3 class="anchored" data-anchor-id="R16">R16 — <a href="https://www.energy.ca.gov/sites/default/files/2024-03/03_LOCA2-forCA-TrainingData_DataJustificationMemo_Pierce_Adopted_ada.pdf">LOCA Version 2 - Training Data (Data Justification Memo)</a></h3>
+<p><em>Pierce, Rahimi, Iacobellis, Cayan &amp; Kalansky 2023 (CEC EPC-20-006)</em> · Memo · Sec 4</p>
+<p><strong>Summary.</strong> Documents the observational training/reference data used for LOCA2 bias correction and analog matching.</p>
+<p><strong>Key findings.</strong> Training data sets the climatology, annual cycle and variability of the downscaled result. Precip = ‘unsplit Livneh’ (Pierce 2021, better extremes than Livneh 2015); temperature = Livneh 2015 extended to 2018 by Lu Su (UCLA). *** Directly answers ‘which observational reference was used’ - feeds Phase 2 reference-dataset scoping. *** Note wind is NOT in the LOCA training data, reinforcing the LOCA-barely-carries-wind caveat.</p>
+<p><strong>Datasets:</strong> LOCA2; training = unsplit Livneh (precip), Livneh 2015 ext (temp) · <strong>Variables:</strong> Precipitation, temperature · <strong>Methods:</strong> Observational training data for BC and the analog library</p>
+<p><strong>Feeds:</strong> Phase 2 proposal (reference-dataset scoping); 1a documentation</p>
+<p><strong>Related questions:</strong> <a href="#DQ9">DQ9</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>The reference-dataset answer for LOCA2; connects to <a href="#R02">R02</a>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R17" class="level3">
+<h3 class="anchored" data-anchor-id="R17">R17 — <a href="https://www.energy.ca.gov/sites/default/files/2025-07/e_Memo_2ndSet_WRF_runs_BC_Sept2024_ada.pdf">Memo on WRF Downscaling with Bias Corrected Boundary Conditions (the four ‘new’ GCMs)</a></h3>
+<p><em>Rahimi, Pierce, Cayan &amp; Kalansky 2024 (CEC EPC-20-006)</em> · Memo · Sec 4</p>
+<p><strong>Summary.</strong> Documents the a priori bias-corrected boundary-condition WRF runs for four additional GCMs.</p>
+<p><strong>Key findings.</strong> The applied ‘what we actually ran’ companion to <a href="#R13">R13</a> (the Cascade method paper): the second set of WRF runs driven by bias-corrected GCM boundary conditions. Notable cross-over - the LOCA-side Pierce BC is applied to the GCM boundary conditions that then force WRF.</p>
+<p><strong>Datasets:</strong> WRF (WUS-D3, 2nd set, 4 new GCMs) · <strong>Variables:</strong> All WRF variables · <strong>Methods:</strong> A priori bias-corrected GCM boundary conditions feeding WRF</p>
+<p><strong>Feeds:</strong> 1a documentation; provenance flowchart (WRF a-priori-BC branch)</p>
+<p><strong>Related questions:</strong> <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> Medium · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Sept 2024 CEC memo (posted 2025).</p>
+</blockquote>
+<hr>
+</section>
+<section id="R18" class="level3">
+<h3 class="anchored" data-anchor-id="R18">R18 — <a href="https://doi.org/10.1175/JHM-D-24-0063.1">Evaluation of the Mountain Hydroclimate across the Western United States in Dynamically Downscaled Climate Models</a></h3>
+<p><em>Adhikari, Geerts, Rahimi-Esfarjani, Smith, Shuman &amp; Schneider 2024 (J. Hydrometeorol. 25(12), 1877-1894)</em> · Peer-reviewed paper · Sec 3</p>
+<p><strong>Summary.</strong> Evaluates how well the WUS-D3 WRF downscaling reproduces observed hydroclimate over complex terrain in the western US.</p>
+<p><strong>Key findings.</strong> Evaluates 15 CMIP6 GCMs downscaled to 9 km (WUS-D3) against PRISM, gauge/station data and a snow reanalysis over 1981-2014 for orographic precipitation, surface temperature and SWE, plus ERA5-driven 9 km and 4 km (CONUS404) reconstructions. Perkins skill for precipitation exceeds 0.9 over plains but is lower over mountains. KEY FOR THE PILLAR: it flags that gridded observational estimates in complex terrain are poorly quantified (esp.&nbsp;PRISM precip over mountains) - the reference-data uncertainty problem that complicates bias correction and validation in exactly the terrain where wind is also hardest.</p>
+<p><strong>Datasets:</strong> WRF WUS-D3 (9 km); ERA5-driven WRF (9 km + CONUS404 4 km) · <strong>Variables:</strong> Orographic precipitation, surface temperature, SWE · <strong>Methods:</strong> Perkins skill score vs PRISM, gauge/station data and snow reanalysis; mountains-vs-plains contrast</p>
+<p><strong>Feeds:</strong> Good/bad matrix (complex-terrain rows); data challenges page; Phase 2 reference-dataset scoping</p>
+<p><strong>Related questions:</strong> <a href="#DQ9">DQ9</a></p>
+<p><strong>Relevance:</strong> Medium · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>WRF WUS-D3 evaluation, not a bias-correction method paper. Rahimi-Esfarjani = Stefan Rahimi (WUS-D3 lead). Its complex-terrain reference-uncertainty finding is the most transferable point for the wind pilot and for reference-dataset choice.</p>
+</blockquote>
+<hr>
+</section>
+<section id="R19" class="level3">
+<h3 class="anchored" data-anchor-id="R19">R19 — <a href="https://atmos.ucla.edu/alexhall/cmip6-downscaling-using-wrf/">CMIP6 Downscaling Using WRF (UCLA Alex Hall Research Group project page)</a></h3>
+<p><em>Alex Hall Research Group, UCLA (accessed Jul 2026)</em> · Website · Sec 0</p>
+<p><strong>Summary.</strong> The source team’s landing page for the WRF dynamical downscaling, with the full simulation matrix and downloadable per-simulation PDFs.</p>
+<p><strong>Key findings.</strong> Documents the WRF setup: 9 km WUS, 3 km convection-permitting CA and WY, 21 hourly + 30 daily variables, 1980-2100, mostly SSP3-7.0. KEY: the simulation table lists, per GCM/variant, which resolutions exist AND the bias-correction status of each 3 km CA run - labelled ‘only no-bc’, ‘only bc’, or both - and highlights which simulations were used in California’s 5th Climate Change Assessment. This is the authoritative map of which WRF runs are bias-corrected vs not. Frames the data around wildfire / utility use (aridity + windiness, PSPS).</p>
+<p><strong>Datasets:</strong> WRF WUS-D3 (45 km / 9 km / 3 km CA / 3 km WY), incl.&nbsp;ERA5-driven runs · <strong>Variables:</strong> 21 hourly + 30 daily WRF variables · <strong>Methods:</strong> WRF dynamical downscaling; per-simulation a priori bias correction (bc vs no-bc variants)</p>
+<p><strong>Feeds:</strong> 1a documentation (bc-vs-no-bc per simulation); provenance flowchart; wind pilot use cases</p>
+<p><strong>Related questions:</strong> <a href="#DQ11">DQ11</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> To read</p>
+<blockquote class="blockquote">
+<p>Data-access contact: Stefan Rahimi (UCLA). Highlighted rows = used in the CA 5th Climate Change Assessment. The 3 km CA bc/no-bc labels are the key detail - reconcile against which WRF version cadcat/AE actually serves (<a href="#Q02">Q02</a> Appendix A notes AE uses the non-a-priori-bias-corrected WRF). Living webpage - note the access date.</p>
+</blockquote>
+<hr>
+</section>
+<section id="Q01" class="level3">
+<h3 class="anchored" data-anchor-id="Q01">Q01 — <a href="RH Sensitivity: Fosberg Fire Weather Index">Relative Humidity Sensitivity Analysis: Fosberg Fire Weather Index</a></h3>
+<p><em>Cal-Adapt AE 2025 (update: Nicole, Mar 2026)</em> · Internal doc · Sec 2</p>
+<p><strong>Summary.</strong> AE sensitivity analysis of how the known RH bias propagates into FFWI.</p>
+<p><strong>Key findings.</strong> FFWI likely biased low due to the known RH bias in CMIP6 downscaled GCMs. RH trend switches sign around GWL2.5 (interior increases), making FFWI non-monotonic. Preliminary recommendation: caution or do-not-use for FFWI at GWL&gt;=2.5. RH bias adjustment alone may not fix the FFWI trend. FFWI&gt;50 exceedance counts trend downward over time (especially TaiESM). Mean wind speeds decrease mildly statewide.</p>
+<p><strong>Datasets:</strong> WRF (AE) · <strong>Variables:</strong> RH, wind speed, air temperature, FFWI · <strong>Methods:</strong> GWL delta signal analysis; FFWI decomposition by calculation step; exceedance counting</p>
+<p><strong>Feeds:</strong> RH report; good/bad matrix (RH and FFWI rows); FAQ</p>
+<p><strong>Related questions:</strong> <a href="#DQ1">DQ1</a>, <a href="#DQ2">DQ2</a>, <a href="#DQ6">DQ6</a>, <a href="#DQ7">DQ7</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Read</p>
+<blockquote class="blockquote">
+<p>Open items: per-model attribution of the RH switch; whether the FFWI=50 threshold is valid for CA; max-wind (vs mean) trends</p>
+</blockquote>
+<hr>
+</section>
+<section id="Q02" class="level3">
+<h3 class="anchored" data-anchor-id="Q02">Q02 — <a href="Evaluating Pyregence Synthetic Relative Humidity Product">Evaluating Pyregence Synthetic Relative Humidity Product</a></h3>
+<p><em>Cal-Adapt AE 2025 (Will Krantz)</em> · Internal doc · Sec 3</p>
+<p><strong>Summary.</strong> Evaluation of whether the Pyregence synthetic RH product produces more realistic long-term RH trends.</p>
+<p><strong>Key findings.</strong> Verdict: acceptable only as a Pyregence wildfire-model input; unacceptable as a standalone or replacement RH product. Applies a roughly uniform negative trend adjustment but FAILS to reproduce ERA5’s strong negative trend when applied to WRF-ERA5. Undocumented training data, undocumented input bias correction, no overfitting validation. Daily-scale artifacts: blotchy spatial patterns, missing inland water, unexplained increases over southern Nevada.</p>
+<p><strong>Datasets:</strong> UCSD bias-corrected WRF, LOCA2, WRF-ERA5, Pyregence synthetic RH, ERA5 · <strong>Variables:</strong> RH (daily min/max) · <strong>Methods:</strong> Trend comparison with 5-yr rolling means; linear trend fitting; regridding to a common grid</p>
+<p><strong>Feeds:</strong> RH report; data challenges page; cautionary example for the Phase 2 proposal</p>
+<p><strong>Related questions:</strong> <a href="#DQ3">DQ3</a>, <a href="#DQ5">DQ5</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Read</p>
+<blockquote class="blockquote">
+<p>Appendix A documents UCLA-WRF vs UCSD post-downscaling bias-corrected WRF differences - useful for provenance flowchart branches</p>
+</blockquote>
+<hr>
+</section>
+<section id="Q03" class="level3">
+<h3 class="anchored" data-anchor-id="Q03">Q03 — <a href="LOCA2 wind speed and direction investigation: Original NetCDF files">LOCA2 wind speed and direction investigation: Original NetCDF files</a></h3>
+<p><em>Cal-Adapt AE 2025 (Ana Ordonez)</em> · Internal doc · Sec 0</p>
+<p><strong>Summary.</strong> Checks whether wind magnitude derived from components matches the provided wspeed variable.</p>
+<p><strong>Key findings.</strong> sqrt(uas^2 + vas^2) does not equal wspeed in the original LOCA2 CA hybrid NetCDFs (tested on ACCESS-CM2 ssp245). The discrepancy is identical in the NetCDF and zarr versions, so it is not an AE ingestion issue - it originates upstream.</p>
+<p><strong>Datasets:</strong> LOCA2 CA hybrid (0.0625deg) · <strong>Variables:</strong> uas, vas, wspeed · <strong>Methods:</strong> Direct comparison of derived vs provided wind magnitude; NetCDF vs zarr cross-check</p>
+<p><strong>Feeds:</strong> Variable cards (uas/vas/wspeed averaging warning); provenance flowchart; data challenges page</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Read</p>
+<blockquote class="blockquote">
+<p>Hypothesis to verify: wspeed may be the daily mean of sub-daily speed while components are daily means (scalar vs vector averaging). Check whether the difference is one-signed. Note the differing file versions: v20230115 vs v20230901</p>
+</blockquote>
+<hr>
+</section>
+<section id="Q04" class="level3">
+<h3 class="anchored" data-anchor-id="Q04">Q04 — <a href="RH Sensitivity Analysis Plan">RH Sensitivity Analysis Plan for Cal-Adapt: AE</a></h3>
+<p><em>Cal-Adapt AE 2025</em> · Internal doc · Sec 2</p>
+<p><strong>Summary.</strong> The parent plan governing AE’s RH bias work. Defines the goals, a three-tier use-case triage, and three workstreams: historical climatology, Heat Index, and FFWI.</p>
+<p><strong>Key findings.</strong> Framing document rather than results. Premise: CMIP6 GCMs project more near-surface moisture than observed, likely propagating into downscaled CCA5 data; affects both WRF and LOCA2; errors largest in arid regions and in the hot/dry season. Target output is a three-tier triage of use cases — proceed as-is / adjustment recommended / adjustment critically necessary — plus a feasibility assessment of an actual adjustment procedure. Status: historical climatology and Heat Index not started; FFWI in progress but on hold.</p>
+<p><strong>Datasets:</strong> WRF, LOCA2 (CCA5), ERA5, HadISD stations, AE airport station locations · <strong>Variables:</strong> RH, air temperature, dewpoint temperature, Heat Index, FFWI · <strong>Methods:</strong> Station-based comparison of WRF/LOCA2 vs ERA5 by region and IOU territory; RH derived from HadISD air temp + dewpoint to test a point-based adjustment, then generalized to gridded data; stepwise regional perturbation of RH holding physical consistency with temperature; recalculation of derived metrics (Rothfusz Heat Index, NOAA FFWI) and of threshold/exceedance metrics</p>
+<p><strong>Feeds:</strong> RH report (parent framing); good/bad matrix — the three-tier triage is the RH row of the matrix; Phase 2 proposal (point→grid generalization); variable cards (RH-dependent derived variables); guidance materials</p>
+<p><strong>Related questions:</strong> <a href="#DQ1">DQ1</a>, <a href="#DQ3">DQ3</a>, <a href="#DQ8">DQ8</a>, <a href="#DQ9">DQ9</a>, <a href="#DQ10">DQ10</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Read</p>
+<blockquote class="blockquote">
+<p>Parent plan for <a href="#Q01">Q01</a> (FFWI). Two of three workstreams not started and one on hold - check current status before building on it. Notes that the equilibrium moisture constant is also used in drought indices, so FFWI findings may transfer. The linked Heat Index slide deck is a separate artifact (see Papers to read).</p>
+</blockquote>
+<hr>
+</section>
+<section id="R20" class="level3">
+<h3 class="anchored" data-anchor-id="R20">R20 — Personal communication on LOCA2 CA hybrid wind speed construction</h3>
+<p><em>D. Pierce (Scripps), pers. comm., August 2026 [confirm exact date]</em> · Personal communication · Sec 0</p>
+<p><strong>Summary.</strong> Scripps confirmation of how wspeed is constructed and bias-corrected relative to uas/vas.</p>
+<p><strong>Key findings.</strong> wspeed is produced by averaging hourly wind speeds to daily (scalar, positive-definite), downscaled and bias-corrected separately from the vector components (signed, can cancel), with different extreme-value handling. Therefore wspeed != sqrt(uas<sup>2+vas</sup>2) by design. Recommendation: use the downscaled wspeed directly; do not reconstruct from daily vector winds. Resolves <a href="#DQ4">DQ4</a>.</p>
+<p><strong>Datasets:</strong> LOCA2 CA hybrid · <strong>Variables:</strong> uas, vas, wspeed · <strong>Methods:</strong> Separate downscaling + bias correction of scalar speed vs vector components</p>
+<p><strong>Feeds:</strong> wspeed variable card; DQ4 resolution; data challenges page</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Received</p>
+<blockquote class="blockquote">
+<p>Personal communication; key quote retained in project notes. Fill exact email date.</p>
+</blockquote>
+<hr>
+</section>
+<section id="Q05" class="level3">
+<h3 class="anchored" data-anchor-id="Q05">Q05 — Cal-Adapt downscaled products vs ERA5: 10 m wind agreement over California (v2)</h3>
+<p><em>AE internal analysis (H. Inda-Diaz), 2026</em> · Internal analysis · Sec 1</p>
+<p><strong>Summary.</strong> Head-to-head validation of AE downscaled 10 m wind (LOCA2 statistical + WRF dynamical, same GCM) vs ERA5 over California, 1980-2010.</p>
+<p><strong>Key findings.</strong> Both products run high vs ERA5 with agreeing timing (seasonal r 0.77-0.92) and a multiplicative offset. On 1351 shared cells the STATISTICAL LOCA2 (+29%) is CLOSER to ERA5 than the DYNAMICAL WRF-GCM (+69%). This REJECTS the v1 hypothesis that LOCA2’s offset came from PresRat: the uncorrected dynamical product is the outlier and PresRat moves LOCA2 toward ERA5. Offset largest over flat interior terrain (opposite of a resolution effect), so origin is upstream (GCM wind climate, WRF surface/PBL, or ERA5 10m diagnostic at 31km). Big caveat: sampling frequency not matched (WRF native-timestep vs ERA5 hourly) inflates WRF. Decisive next step: WRF-ERA5 run (same sampling).</p>
+<p><strong>Datasets:</strong> LOCA2 (CNRM-ESM2-1 historical); WRF-GCM (CNRM-ESM2-1 historical); ERA5 · <strong>Variables:</strong> wspeed / wspd10mean (u10/v10 for ERA5) · <strong>Methods:</strong> source-&gt;ERA5 block-mean regrid (rectilinear + curvilinear paths); coverage mask; ERA5 hourly-&gt;scalar-&gt;monthly; climatological metrics</p>
+<p><strong>Feeds:</strong> good/bad matrix (mean-bias dimension); wspeed variable card (ERA5 validation); data challenges page</p>
+<p><strong>Related questions:</strong> <a href="#DQ4">DQ4</a>, <a href="#DQ9">DQ9</a></p>
+<p><strong>Relevance:</strong> High · <strong>Status:</strong> Draft</p>
+<blockquote class="blockquote">
+<p>v2 supersedes v1. Single realization each; sampling-frequency caveat on WRF. See era5-comparison page + FINDINGS_v2.md. Next: WRF-ERA5 control run.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="open-questions-dq-details" class="level2">
+<h2 class="anchored" data-anchor-id="open-questions-dq-details">Open questions (DQ##) — details</h2>
+<section id="DQ1" class="level3">
+<h3 class="anchored" data-anchor-id="DQ1">DQ1</h3>
+<p><strong>Question.</strong> Is the RH trend switch at GWL&gt;=2.5 driven by one model (e.g.&nbsp;TaiESM) or consistent across models?</p>
+<p><strong>Raised by:</strong> FFWI sensitivity analysis · <strong>Datasets:</strong> WRF (AE) · <strong>Variables:</strong> RH</p>
+<p><strong>Related sources:</strong> <a href="#Q01">Q01</a>, <a href="#R05">R05</a>, <a href="#Q04">Q04</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>If it is one model, a possible outcome is an exclusion recommendation for RH and FFWI uses</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ2" class="level3">
+<h3 class="anchored" data-anchor-id="DQ2">DQ2</h3>
+<p><strong>Question.</strong> Is FFWI usable at GWL&gt;=2.5, and is the FFWI=50 threshold appropriate for California?</p>
+<p><strong>Raised by:</strong> FFWI sensitivity analysis · <strong>Datasets:</strong> WRF (AE) · <strong>Variables:</strong> FFWI</p>
+<p><strong>Related sources:</strong> <a href="#Q01">Q01</a></p>
+<p><strong>Status:</strong> Open - preliminary caution issued · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>Feeds the good/bad matrix directly</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ3" class="level3">
+<h3 class="anchored" data-anchor-id="DQ3">DQ3</h3>
+<p><strong>Question.</strong> Does WRF downscaling preserve the RH trends of the parent GCM or reanalysis?</p>
+<p><strong>Raised by:</strong> Pyregence evaluation (WRF-ERA5 vs ERA5 result) · <strong>Datasets:</strong> WRF-ERA5, WRF-GCM · <strong>Variables:</strong> RH</p>
+<p><strong>Related sources:</strong> <a href="#Q02">Q02</a>, <a href="#R05">R05</a>, <a href="#Q04">Q04</a>, <a href="#R06">R06</a>, <a href="#R07">R07</a>, <a href="#R10">R10</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>If not, the GCM RH literature may not transfer to downscaled data - this reframes the whole RH report</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ4" class="level3">
+<h3 class="anchored" data-anchor-id="DQ4">DQ4</h3>
+<p><strong>Question.</strong> Why does wspeed differ from sqrt(uas^2 + vas^2) in the LOCA2 hybrid files?</p>
+<p><strong>Raised by:</strong> Ana’s wind investigation · <strong>Datasets:</strong> LOCA2 CA hybrid · <strong>Variables:</strong> uas, vas, wspeed</p>
+<p><strong>Related sources:</strong> <a href="#Q03">Q03</a>, <a href="#R04">R04</a>, <a href="#R12">R12</a>, <a href="#R15">R15</a>, <a href="#R20">R20</a></p>
+<p><strong>Status:</strong> Resolved (Scripps, R20) · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>RESOLVED: wspeed is a separately downscaled/bias-corrected scalar daily-mean speed, not equal to sqrt(uas<sup>2+vas</sup>2) by design; use wspeed directly (D. Pierce, Scripps, <a href="#R20">R20</a>). The positive offset is the scalar pedestal; the left-skewed tail reflects the differing bias correction of speed vs components.</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ5" class="level3">
+<h3 class="anchored" data-anchor-id="DQ5">DQ5</h3>
+<p><strong>Question.</strong> What bias correction was applied to the LOCA2 and WRF-ERA5 inputs before synthetic RH generation?</p>
+<p><strong>Raised by:</strong> Pyregence evaluation · <strong>Datasets:</strong> LOCA2, WRF-ERA5 · <strong>Variables:</strong> RH</p>
+<p><strong>Related sources:</strong> <a href="#Q02">Q02</a>, <a href="#R06">R06</a></p>
+<p><strong>Status:</strong> Open - memo obtained, does not document it · <strong>Priority:</strong> Medium</p>
+<blockquote class="blockquote">
+<p>The Pyregence memo (<a href="#R06">R06</a>) has now been read and documents NO additional bias correction on the LOCA2 or WRF-ERA5 inputs. The large LOCA2 bias shift <a href="#Q02">Q02</a> observed is therefore still unexplained and needs a direct question to the Pyregence team. Related unresolved gap: the memo never names the observational dataset the regression was trained on.</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ6" class="level3">
+<h3 class="anchored" data-anchor-id="DQ6">DQ6</h3>
+<p><strong>Question.</strong> Are the projected wind speed decreases robust for maximum winds, not just means?</p>
+<p><strong>Raised by:</strong> FFWI sensitivity analysis · <strong>Datasets:</strong> WRF (AE) · <strong>Variables:</strong> Wind speed</p>
+<p><strong>Related sources:</strong> <a href="#Q01">Q01</a>, <a href="#R12">R12</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> Medium</p>
+<blockquote class="blockquote">
+<p>Connects to wind pilot Sec 3 - extremes vs means</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ7" class="level3">
+<h3 class="anchored" data-anchor-id="DQ7">DQ7</h3>
+<p><strong>Question.</strong> Is the spatial variability of wind and RH trends consistent across GWLs (same areas windier or drier each time)?</p>
+<p><strong>Raised by:</strong> FFWI sensitivity analysis · <strong>Datasets:</strong> WRF (AE) · <strong>Variables:</strong> Wind, RH</p>
+<p><strong>Related sources:</strong> <a href="#Q01">Q01</a>, <a href="#R12">R12</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> Medium</p>
+<blockquote class="blockquote">
+<p>Flagged as to-be-determined in the source doc</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ8" class="level3">
+<h3 class="anchored" data-anchor-id="DQ8">DQ8</h3>
+<p><strong>Question.</strong> Is the RH bias constant in time, or does it change over the projection period?</p>
+<p><strong>Raised by:</strong> RH Sensitivity Analysis Plan (Q04) · <strong>Datasets:</strong> WRF, LOCA2 (CCA5) · <strong>Variables:</strong> RH</p>
+<p><strong>Related sources:</strong> <a href="#Q04">Q04</a>, <a href="#R06">R06</a>, <a href="#R07">R07</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>Determines whether a single-offset correction is even viable. Direct input to the Phase 2 proposal.</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ9" class="level3">
+<h3 class="anchored" data-anchor-id="DQ9">DQ9</h3>
+<p><strong>Question.</strong> Can a station-derived RH adjustment (HadISD dewpoint-derived RH) be generalised from points to the full grid?</p>
+<p><strong>Raised by:</strong> RH Sensitivity Analysis Plan (Q04) · <strong>Datasets:</strong> WRF, LOCA2, HadISD stations · <strong>Variables:</strong> RH, dewpoint temperature</p>
+<p><strong>Related sources:</strong> <a href="#Q04">Q04</a>, <a href="#R16">R16</a>, <a href="#R18">R18</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>This is the full-grid bias adjustment question in RH form - the same problem as the Phase 2 wind proposal, and the sparse-station difficulty is shared. Strong case for scoping the two together.</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ10" class="level3">
+<h3 class="anchored" data-anchor-id="DQ10">DQ10</h3>
+<p><strong>Question.</strong> Which AE derived variables and metrics depend on RH?</p>
+<p><strong>Raised by:</strong> RH Sensitivity Analysis Plan (Q04) · <strong>Datasets:</strong> WRF, LOCA2 · <strong>Variables:</strong> RH, Heat Index, FFWI, derived RH</p>
+<p><strong>Related sources:</strong> <a href="#Q04">Q04</a>, <a href="#Q01">Q01</a>, <a href="#R10">R10</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>Named so far: Heat Index, FFWI and ‘derived RH’. Confirm the complete list. Pure documentation, answerable now, feeds the variable cards directly.</p>
+</blockquote>
+<hr>
+</section>
+<section id="DQ11" class="level3">
+<h3 class="anchored" data-anchor-id="DQ11">DQ11</h3>
+<p><strong>Question.</strong> Is the memo’s claim correct that bias correction can fix mean and variance but not long-term trend errors? If so, what does that imply for the Phase 2 full-grid method choice?</p>
+<p><strong>Raised by:</strong> Pyregence memo (R06) · <strong>Datasets:</strong> WRF, LOCA2 · <strong>Variables:</strong> RH, and any variable with a suspect trend</p>
+<p><strong>Related sources:</strong> <a href="#R06">R06</a>, <a href="#R07">R07</a>, <a href="#R05">R05</a>, <a href="#R09">R09</a>, <a href="#R13">R13</a>, <a href="#R14">R14</a>, <a href="#R17">R17</a>, <a href="#R19">R19</a></p>
+<p><strong>Status:</strong> Open · <strong>Priority:</strong> High</p>
+<blockquote class="blockquote">
+<p>This is the most load-bearing methodological claim we have found for Phase 2. If true as stated, quantile-mapping-family methods cannot fix the RH problem and the shortlist must centre on trend-preserving or trend-correcting approaches - or concede that a rebuild (as Pyregence chose) is the only option. Note the claim is asserted in a draft memo, not demonstrated, so it needs testing against the bias-correction literature rather than adoption.</p>
+</blockquote>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>AE Data Quality &amp; Documentation Pillar · draft</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
