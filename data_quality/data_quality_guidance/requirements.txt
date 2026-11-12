@@ -1,0 +1,7 @@
+# Python packages needed to execute the code cells when Quarto renders the site.
+jupyter
+ipykernel
+pandas
+pyyaml
+itables
+tabulate
