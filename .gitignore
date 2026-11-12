@@ -1,0 +1,13 @@
+.aws
+.cache
+.config
+.ipynb_checkpoints
+.ipython
+.jupyter
+.local
+.pyc
+.DS_Store
+__pycache__
+
+# ignore figures
+*.png
