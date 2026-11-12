@@ -1,0 +1,21 @@
+# Netlify build for the AE Data Quality Guidance Quarto site.
+# `base` here overrides the Base directory set in the Netlify UI. The command runs
+# inside that folder, and `publish` is relative to it.
+#
+# Netlify's build image does not ship Quarto, so the command downloads a pinned
+# release, registers the "climakitae" Jupyter kernel that the .qmd pages request
+# (after installing the Python packages from requirements.txt), and renders into _site/.
+
+[build]
+  base = "data_quality/data_quality_guidance"
+  command = """
+    curl -fsSL "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" | tar -xz -C /tmp \
+    && python -m pip install --quiet -r requirements.txt \
+    && python -m ipykernel install --user --name climakitae --display-name climakitae \
+    && /tmp/quarto-${QUARTO_VERSION}/bin/quarto render
+  """
+  publish = "_site"
+
+[build.environment]
+  QUARTO_VERSION = "1.11.9"
+  PYTHON_VERSION = "3.13"
