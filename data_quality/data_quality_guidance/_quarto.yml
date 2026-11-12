@@ -66,9 +66,8 @@ format:
     fig-cap-location: bottom
     comments:
       hypothesis:
-      theme: clean
-      openSidebar: true
-
+        theme: clean
+        openSidebar: true
 execute:
   echo: false
   warning: false
