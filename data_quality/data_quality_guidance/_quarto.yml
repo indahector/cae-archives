@@ -64,6 +64,10 @@ format:
     # forcing each one to scroll.
     page-layout: article
     fig-cap-location: bottom
+    comments:
+      hypothesis:
+      theme: clean
+      openSidebar: true
 
 execute:
   echo: false

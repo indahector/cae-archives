@@ -7,7 +7,7 @@ jupyter: climakitae
 
 Each card answers, for one variable: what it is, where it came from, what it is good and bad for,
 and what known issues apply. Cards are generated from `data/variables.yml`; the use-case verdicts
-read live from the [good/bad matrix](good-bad-matrix.qmd), and every `R##` / `Q##` / `DQ##` links
+read live from the [good/bad matrix](../guidance/recommendation.qmd), and every `R##` / `Q##` / `DQ##` links
 to its entry on the [References](../references.qmd) page. Add a variable by adding one YAML entry.
 
 ```{python}

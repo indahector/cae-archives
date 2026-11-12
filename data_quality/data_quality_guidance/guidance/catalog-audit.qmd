@@ -205,8 +205,7 @@ print(und.to_markdown(index=False))
 **`dew_point` and `effective_temp_index` are published at three domains and three
 cadences and documented nowhere**, so a user pulling either gets a field with no
 units and no display name. `rh` is published hourly but documented only at
-`day`/`mon`, which affects the
-[relative humidity](../variables/relative-humidity.qmd) work directly.
+`day`/`mon`, which affects the [relative humidity](../variables/relative-humidity.qmd) work directly.
 
 ---
 
