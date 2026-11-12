@@ -45,6 +45,10 @@ website:
 
 format:
   html:
+    comments:
+      hypothesis:
+        theme: clean
+        openSidebar: false
     theme: cosmo
     css:
       - styles.css
